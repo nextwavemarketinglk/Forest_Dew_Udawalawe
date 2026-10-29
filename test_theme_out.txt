@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body data-page="rooms">
+  <header class="site-header header-dark" id="site-header">
+    <div class="intl-topbar" id="intl-topbar">
+      <div class="container intl-topbar-container">
+        <div class="intl-topbar-weather">
+          <span>Udawalawe Sanctuary</span>
+        </div>
+      </div>
+    </div>
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <div class="brand-words">
+          <span class="brand-name">Forest Dew</span>
+          <span class="brand-sub">Udawalawa</span>
+        </div>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link active">Rooms</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+94766386132" class="header-phone"><span>+94 76 638 6132</span></a>
+      </div>
+    </div>
+  </header>
+  <div id="results" style="margin-top: 200px; padding: 20px; font-family: monospace; font-size: 16px;">{
+  "theme": "light",
+  "header_bg": "rgba(250, 248, 245, 0.98)",
+  "header_pos": "fixed",
+  "header_zIndex": "950",
+  "nav_color": "rgb(22, 26, 25)",
+  "active_color": "rgb(166, 124, 30)",
+  "brand_color": "rgb(22, 26, 25)",
+  "phone_color": "rgb(22, 26, 25)"
+}</div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const navLink = document.querySelector('.desktop-nav .nav-link');
+      const activeLink = document.querySelector('.desktop-nav .nav-link.active');
+      const brandName = document.querySelector('.brand-name');
+      const phone = document.querySelector('.header-phone');
+      
+      const out = {
+        theme: document.documentElement.getAttribute('data-theme'),
+        header_bg: getComputedStyle(header).backgroundColor,
+        header_pos: getComputedStyle(header).position,
+        header_zIndex: getComputedStyle(header).zIndex,
+        nav_color: getComputedStyle(navLink).color,
+        active_color: getComputedStyle(activeLink).color,
+        brand_color: getComputedStyle(brandName).color,
+        phone_color: getComputedStyle(phone).color
+      };
+      document.getElementById('results').textContent = JSON.stringify(out, null, 2);
+    });
+  </script>
+
+
+</body></html>

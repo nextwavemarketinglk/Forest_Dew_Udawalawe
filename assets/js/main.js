@@ -10,11 +10,24 @@
   const CONFIG = window.FOREST_DEW_CONFIG || {};
   const WA_NUMBER = CONFIG.hotel?.whatsappNumber || '94766386132';
 
+  // Storage may be unavailable in restricted previews/private browsing.  Keep
+  // navigation and the mobile drawer working even when that happens.
+  const safeStorage = {
+    getItem(key) {
+      try { return window.localStorage.getItem(key); }
+      catch (err) { return null; }
+    },
+    setItem(key, value) {
+      try { window.localStorage.setItem(key, value); }
+      catch (err) { /* Keep using the current page's setting. */ }
+    }
+  };
+
   // 1. Theme (Dark / Light Mode) Controller
   const THEME_KEY = 'fd_theme';
   
   function getPreferredTheme() {
-    const saved = localStorage.getItem(THEME_KEY);
+    const saved = safeStorage.getItem(THEME_KEY);
     if (saved === 'dark' || saved === 'light') return saved;
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
@@ -24,7 +37,7 @@
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem(THEME_KEY, theme);
+    safeStorage.setItem(THEME_KEY, theme);
 
     // Update all toggle buttons state
     document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
@@ -54,7 +67,7 @@
   // Listen for OS theme changes if user hasn't manually chosen
   if (window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (!localStorage.getItem(THEME_KEY)) {
+      if (!safeStorage.getItem(THEME_KEY)) {
         applyTheme(e.matches ? 'dark' : 'light');
       }
     });
@@ -70,7 +83,7 @@
     LKR: { code: "LKR", symbol: "Rs", rateToLKR: 1, prefix: "LKR " }
   };
 
-  let activeCurrency = localStorage.getItem(CURRENCY_KEY) || 'USD';
+  let activeCurrency = safeStorage.getItem(CURRENCY_KEY) || 'USD';
   window.getActiveCurrency = () => activeCurrency;
 
   window.formatLKR = (num) => `LKR ${Number(num).toLocaleString('en-LK')}`;
@@ -101,11 +114,11 @@
   window.setCurrency = (currCode) => {
     if (!currencies[currCode]) return;
     activeCurrency = currCode;
-    localStorage.setItem(CURRENCY_KEY, currCode);
+    safeStorage.setItem(CURRENCY_KEY, currCode);
     document.documentElement.setAttribute('data-currency', currCode);
 
     // Update active state on all currency buttons (desktop and mobile)
-    document.querySelectorAll('[data-currency]').forEach(btn => {
+    document.querySelectorAll('button[data-currency], a[data-currency], [role="button"][data-currency]').forEach(btn => {
       const match = btn.dataset.currency === currCode;
       btn.classList.toggle('is-active', match);
       btn.setAttribute('aria-pressed', String(match));
@@ -138,7 +151,7 @@
 
   // Listen for currency button clicks
   document.addEventListener('click', (e) => {
-    const currBtn = e.target.closest('[data-currency]');
+    const currBtn = e.target.closest('button[data-currency], a[data-currency], [role="button"][data-currency]');
     if (currBtn) {
       e.preventDefault();
       window.setCurrency(currBtn.dataset.currency);
@@ -262,8 +275,19 @@
       }
     });
 
+    // Handle mobile navigation links without aborting document navigation
     mobileDrawer.querySelectorAll('.mobile-drawer-link').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href') || '';
+        const isCurrentPage = link.dataset.link === currentPage ||
+                              (currentPage === 'home' && (href === 'index.html' || href === './' || href === ''));
+        if (href.startsWith('#') || isCurrentPage) {
+          closeMobileMenu();
+        } else {
+          // Delay menu close slightly so browser can register and initiate page transition
+          setTimeout(closeMobileMenu, 200);
+        }
+      });
     });
 
     document.addEventListener('keydown', (e) => {

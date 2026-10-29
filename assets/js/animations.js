@@ -106,21 +106,8 @@
         });
       });
 
-      // 5. Magnetic Hover Effect for Luxury Elements on Non-Touch Devices
-      if (window.matchMedia('(pointer: fine)').matches) {
-        document.querySelectorAll('.btn-gold, .btn-graphite, .header-cta, .theme-toggle-btn, .luxury-concierge-pill, .hero-scene-btn, .sanctuary-pill, .gallery-filter-btn, .party-btn').forEach(btn => {
-          btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = (e.clientX - rect.left - rect.width / 2) * 0.22;
-            const y = (e.clientY - rect.top - rect.height / 2) * 0.22;
-            window.gsap.to(btn, { x, y, duration: 0.3, ease: 'power2.out' });
-          });
-
-          btn.addEventListener('mouseleave', () => {
-            window.gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
-          });
-        });
-      }
+      // 5. Clean, reliable button hover interactions (no position shifts to guarantee 100% click reliability)
+      // Removed magnetic translate jitter that interfered with browser click & tap events
 
       // 6. Scale In Reveals
       window.gsap.utils.toArray('.reveal-scale-in').forEach(item => {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body style="height: 3000px;">
+  <header class="site-header" id="site-header">
+    <div class="intl-topbar" id="intl-topbar">
+      <div class="container intl-topbar-container">
+        <span>Weather ribbon</span>
+      </div>
+    </div>
+    <div class="container header-container">
+      <span class="brand-name">Forest Dew</span>
+      <nav class="desktop-nav">
+        <a href="rooms.html" class="nav-link">Rooms</a>
+      </nav>
+    </div>
+  </header>
+  <div id="log" style="position: absolute; top: 1200px; font-size: 20px;"></div>
+  <script>
+    window.addEventListener('load', () => {
+      const h = document.querySelector('.site-header');
+      const r1 = h.getBoundingClientRect();
+      window.scrollTo(0, 1000);
+      setTimeout(() => {
+        const r2 = h.getBoundingClientRect();
+        document.getElementById('log').textContent = JSON.stringify({
+          before: { top: r1.top, y: r1.y },
+          after: { top: r2.top, y: r2.y, scrollY: window.scrollY },
+          classes: h.className,
+          computed_pos: getComputedStyle(h).position
+        });
+      }, 100);
+    });
+  </script>
+</body>
+</html>

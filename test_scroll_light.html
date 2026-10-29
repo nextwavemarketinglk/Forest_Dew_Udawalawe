@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<script>
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 800);
+  });
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191D1C">
+  <title>Forest Dew Udawalawa | Hotel Stay &amp; Safari Experiences in Sri Lanka</title>
+  <meta name="description" content="Discover Forest Dew Udawalawa, offering comfortable accommodation, swimming pool facilities and safari experiences in Udawalawe, Sri Lanka. Explore rooms, rates and safari packages.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forest Dew Udawalawa">
+  <meta property="og:title" content="Forest Dew Udawalawa | Hotel Stay &amp; Safari Experiences in Sri Lanka">
+  <meta property="og:description" content="A tranquil boutique safari retreat in Udawalawe, Sri Lanka. Comfortable rooms, freshwater swimming pool, local dining and private guided safaris.">
+  <meta property="og:image" content="assets/images/guest-room-forest.webp">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Forest Dew Udawalawa | Hotel Stay &amp; Safari Experiences in Sri Lanka">
+  <meta name="twitter:description" content="A tranquil boutique safari retreat in Udawalawe, Sri Lanka. Comfortable rooms, pool, dining and private safaris.">
+  <meta name="twitter:image" content="assets/images/guest-room-forest.webp">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Forest Dew Udawalawa",
+    "description": "Boutique hotel accommodation and private safari arrangements in Udawalawe, Sri Lanka",
+    "telephone": "+94 76 638 6132",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "484/1 C.P. De Silva Road",
+      "addressLocality": "Udawalawa",
+      "postalCode": "70190",
+      "addressRegion": "Sabaragamuwa",
+      "addressCountry": "LK"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Outdoor Swimming Pool" },
+      { "@type": "LocationFeatureSpecification", "name": "Restaurant & Dining" },
+      { "@type": "LocationFeatureSpecification", "name": "Private Udawalawe Safari Arrangements" },
+      { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi" },
+      { "@type": "LocationFeatureSpecification", "name": "Free On-Site Parking" }
+    ]
+  }
+  </script>
+
+  <!-- Favicon & Web Manifest -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('fd_theme');
+      if (t) { document.documentElement.setAttribute('data-theme', t); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Typography: Google Fonts (Cormorant Garamond & Manrope) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- GSAP & ScrollTrigger for Motion Quality -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Core Scripts -->
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/booking.js"></script>
+  <script defer src="assets/js/gallery.js"></script>
+</head>
+<body data-page="home">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Subtle Scroll Progress Bar -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header header-dark" id="site-header">
+    <!-- ==========================================================================
+         INTERNATIONAL PRE-HEADER UTILITY RIBBON (Aman / 5-Star Luxury Standard)
+         ========================================================================== -->
+    <div class="intl-topbar" id="intl-topbar">
+      <div class="container intl-topbar-container">
+        <div class="intl-topbar-weather">
+          <span class="intl-live-dot" aria-hidden="true"></span>
+          <span>Udawalawe Sanctuary · <strong id="intl-local-time">--:--</strong> <small>(GMT+5:30)</small> · 29°C Safari Weather · Fair Skies</span>
+        </div>
+      </div>
+    </div>
+    <div class="container header-container">
+      <!-- Official Brand Logo -->
+      <a href="index.html" class="brand" aria-label="Forest Dew Udawalawa — Return to homepage">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/logo-mark.png" alt="Forest Dew Emblem" class="brand-emblem" width="40" height="40">
+        </div>
+        <div class="brand-words">
+          <span class="brand-name">Forest Dew</span>
+          <span class="brand-sub">Udawalawa</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active" data-link="home" aria-current="page">Home</a>
+        <a href="rooms.html" class="nav-link" data-link="rooms">Rooms &amp; Rates</a>
+        <a href="safari.html" class="nav-link" data-link="safari">Safari</a>
+        <a href="experiences.html" class="nav-link" data-link="experiences">Experiences</a>
+        <a href="gallery.html" class="nav-link" data-link="gallery">Gallery</a>
+        <a href="about.html" class="nav-link" data-link="about">About</a>
+        <a href="contact.html" class="nav-link" data-link="contact">Contact</a>
+      </nav>
+
+      <!-- Actions: Phone, Dark Mode & Enquire -->
+      <div class="header-actions">
+        <a href="tel:+94766386132" class="header-phone" aria-label="Call Forest Dew Reception">
+          <span>+94 76 638 6132</span>
+        </a>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="plan-stay.html" class="header-cta">
+          Plan Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+        </a>
+        <!-- Mobile Toggle Button -->
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span class="eyebrow eyebrow-dark" style="margin: 0;">Boutique Safari Stay · Udawalawe</span>
+        <!-- Mobile Dark Mode Switcher -->
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation Menu">
+        <a href="index.html" class="mobile-drawer-link active" data-link="home">
+          Home <span>01</span>
+        </a>
+        <a href="rooms.html" class="mobile-drawer-link" data-link="rooms">
+          Rooms &amp; Rates <span>02</span>
+        </a>
+        <a href="safari.html" class="mobile-drawer-link" data-link="safari">
+          Safari Adventures <span>03</span>
+        </a>
+        <a href="experiences.html" class="mobile-drawer-link" data-link="experiences">
+          Hotel Experiences <span>04</span>
+        </a>
+        <a href="gallery.html" class="mobile-drawer-link" data-link="gallery">
+          Photo Journal <span>05</span>
+        </a>
+        <a href="plan-stay.html" class="mobile-drawer-link" data-link="planner">
+          Plan Your Stay <span>06</span>
+        </a>
+        <a href="about.html" class="mobile-drawer-link" data-link="about">
+          About Forest Dew <span>07</span>
+        </a>
+        <a href="contact.html" class="mobile-drawer-link" data-link="contact">
+          Contact &amp; Location <span>08</span>
+        </a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="tel:+94766386132" class="mobile-drawer-phone">+94 76 638 6132 ↗</a>
+      <p class="mobile-drawer-address">484/1 C.P. De Silva Road, Udawalawa, 70190, Sri Lanka</p>
+    </div>
+  </div>
+
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         SECTION 01: CINEMATIC HERO
+         ========================================================================== -->
+    <section class="hero-cinematic" id="hero" aria-label="Welcome to Forest Dew Udawalawa">
+      <div class="hero-bg-media" aria-hidden="true">
+        <!-- Main Image 01: Aerial Canopy & Lake -->
+        <div class="hero-slide is-active" data-hero-slide="0">
+          <img src="assets/images/hotel-aerial-canopy.jpg" alt="Aerial panorama of Forest Dew nestled within Udawalawe forest canopy and lake" fetchpriority="high">
+        </div>
+        <!-- Main Image 02: Boutique Guest Wing Architecture -->
+        <div class="hero-slide" data-hero-slide="1">
+          <img src="assets/images/hotel-exterior-facade.jpg" alt="Two-storey white boutique guest wing with private balconies and garden terraces" loading="eager">
+        </div>
+        <!-- Main Image 03: Freshwater Swimming Pool Sanctuary -->
+        <div class="hero-slide" data-hero-slide="2">
+          <img src="assets/images/swimming-pool.webp" alt="Outdoor freshwater swimming pool framed by coconut trees and forest" loading="eager">
+        </div>
+      </div>
+      <div class="hero-bg-overlay"></div>
+      <!-- Creative Ethereal Morning Dew Canopy Light Rays -->
+      <div class="canopy-light-stream" aria-hidden="true">
+        <div class="canopy-ray canopy-ray-1"></div>
+        <div class="canopy-ray canopy-ray-2"></div>
+        <div class="canopy-ray canopy-ray-3"></div>
+      </div>
+
+      <!-- Floating Clear View Return Hint (Active when user taps Clear View) -->
+      <div class="hero-clear-view-toast" id="hero-clear-view-toast" aria-hidden="true">
+        <span>✦ Unobstructed View · Tap anywhere or switch scene</span>
+        <button type="button" class="hero-toast-close" id="hero-toast-close" aria-label="Exit clear photo view">✕</button>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-grid">
+          <div class="hero-col-main hero-content-col-main">
+            <!-- Atmospheric Gold Glow Behind Hero Text -->
+            <div class="hero-text-aura" aria-hidden="true"></div>
+
+            <div class="hero-kicker">
+              <span class="hero-kicker-dot dewdrop-radar"></span>
+              <span>Sanctuary &amp; Lake Buffer · 6.4716° N, 80.8987° E · Udawalawe</span>
+            </div>
+            <div class="hero-light-accent-beam" aria-hidden="true"></div>
+            <h1 class="hero-title hero-kinetic-title" aria-label="Where the Wild Meets Wonderful.">
+              <span class="hero-title-line line-1" aria-hidden="true">
+                <span class="hero-word"><span class="char" style="--ci: 0">W</span><span class="char" style="--ci: 1">h</span><span class="char" style="--ci: 2">e</span><span class="char" style="--ci: 3">r</span><span class="char" style="--ci: 4">e</span></span>
+                <span class="hero-word"><span class="char" style="--ci: 5">t</span><span class="char" style="--ci: 6">h</span><span class="char" style="--ci: 7">e</span></span>
+                <span class="hero-word hero-word-wild"><em class="hero-glow-word"><span class="char char-wild" style="--ci: 8">W</span><span class="char char-wild" style="--ci: 9">i</span><span class="char char-wild" style="--ci: 10">l</span><span class="char char-wild" style="--ci: 11">d</span></em><span class="wild-sparkle" aria-hidden="true">✦</span></span>
+              </span>
+              <span class="hero-title-line line-2" aria-hidden="true">
+                <span class="hero-word"><span class="char" style="--ci: 12">M</span><span class="char" style="--ci: 13">e</span><span class="char" style="--ci: 14">e</span><span class="char" style="--ci: 15">t</span><span class="char" style="--ci: 16">s</span></span>
+                <span class="hero-word hero-word-wonderful"><span class="char" style="--ci: 17">W</span><span class="char" style="--ci: 18">o</span><span class="char" style="--ci: 19">n</span><span class="char" style="--ci: 20">d</span><span class="char" style="--ci: 21">e</span><span class="char" style="--ci: 22">r</span><span class="char" style="--ci: 23">f</span><span class="char" style="--ci: 24">u</span><span class="char" style="--ci: 25">l</span><span class="char char-dot" style="--ci: 26">.</span></span>
+              </span>
+              <span class="hero-title-horizon" aria-hidden="true"></span>
+            </h1>
+            <p class="hero-lead hero-animate-lead">
+              Discover a peaceful retreat in Udawalawe, where comfortable stays, natural surroundings, and unforgettable safari adventures come together.
+            </p>
+            <div class="hero-actions hero-animate-actions">
+              <a href="rooms.html" class="btn btn-gold">
+                View Rooms <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="safari.html" class="btn btn-outline-light">
+                Explore Safaris <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="plan-stay.html" class="btn-text" style="color: var(--soft-chalk);">
+                Reserve Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-col-meta">
+            <div class="hero-meta-panel">
+              <div class="hero-meta-items-group">
+                <div class="hero-meta-item">
+                  <span class="hero-meta-label">Setting</span>
+                  <span class="hero-meta-value">Udawalawe Nature Belt</span>
+                </div>
+                <div class="hero-meta-divider"></div>
+                <div class="hero-meta-item">
+                  <span class="hero-meta-label">Sanctuary</span>
+                  <span class="hero-meta-value">Freshwater Pool &amp; Dining</span>
+                </div>
+                <div class="hero-meta-divider"></div>
+                <div class="hero-meta-item">
+                  <span class="hero-meta-label">Expeditions</span>
+                  <span class="hero-meta-value">Private 4x4 Park Safaris</span>
+                </div>
+              </div>
+              <div class="hero-meta-divider hero-meta-main-divider"></div>
+              <!-- Interactive Hero Atmosphere Scene Switcher (3 Main Scenes · 4s Cycle) -->
+              <div class="hero-scene-nav" aria-label="Explore hotel atmospheres">
+                <div class="hero-scene-header">
+                  <div class="hero-scene-title-wrap">
+                    <span class="hero-scene-title">Atmosphere</span>
+                    <span class="hero-scene-caption-live" id="hero-scene-caption">01 · Canopy Panorama</span>
+                  </div>
+                  <!-- Mobile Clear View / Photo Inspection Toggle -->
+                  <button type="button" class="hero-clear-view-btn" id="hero-clear-view-toggle" aria-label="Toggle clear photo view" title="View clear photos without text">
+                    <svg class="view-icon-eye" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <span class="view-label">Clear View</span>
+                  </button>
+                </div>
+                <div class="hero-scene-btns">
+                  <button type="button" class="hero-scene-btn is-active" data-hero-scene-idx="0" aria-pressed="true" title="Aerial Canopy &amp; Lake">
+                    <span>01</span> Canopy
+                  </button>
+                  <button type="button" class="hero-scene-btn" data-hero-scene-idx="1" aria-pressed="false" title="Two-Storey Boutique Architecture">
+                    <span>02</span> Architecture
+                  </button>
+                  <button type="button" class="hero-scene-btn" data-hero-scene-idx="2" aria-pressed="false" title="Freshwater Swimming Pool">
+                    <span>03</span> Pool
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Scroll Indicator -->
+      <a href="#booking-bar" class="hero-scroll-indicator" aria-label="Scroll down to reservation enquiry bar">
+        <span>Scroll to Explore</span>
+        <div class="hero-scroll-line" aria-hidden="true"></div>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02: BOOKING EXPERIENCE BAR
+         ========================================================================== -->
+    <section class="container booking-bar-wrapper" id="booking-bar" aria-label="Stay Enquiry Bar">
+      <div class="booking-bar reveal-fade-up">
+        <div class="booking-bar-header">
+          <div class="booking-bar-title">
+            <span>✦</span>
+            <span>Plan Your Stay at Forest Dew</span>
+          </div>
+          <span class="booking-bar-note">Direct Hotel Enquiry · No Third-Party Booking Fees</span>
+        </div>
+
+        <form class="booking-form-grid" id="quick-booking-form" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="quick-checkin">Check-in Date</label>
+            <input type="date" id="quick-checkin" name="checkin" class="form-input" required aria-label="Check-in date">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="quick-checkout">Check-out Date</label>
+            <input type="date" id="quick-checkout" name="checkout" class="form-input" required aria-label="Check-out date">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="quick-room">Room Category</label>
+            <select id="quick-room" name="room" class="form-select" aria-label="Room category">
+              <option value="single">Single Room (from LKR 6,000)</option>
+              <option value="double" selected>Double Room (from LKR 10,000)</option>
+              <option value="triple">Triple Room (from LKR 17,000)</option>
+              <option value="family">Family Room (from LKR 20,000)</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="quick-guests">Guests</label>
+            <select id="quick-guests" name="guests" class="form-select" aria-label="Number of guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
+            </select>
+          </div>
+          <button type="submit" class="booking-submit-btn">
+            Check Availability <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERNATIONAL 5-STAR ACCREDITATION & TRUST STRIP (Aman Standard)
+         ========================================================================== -->
+    <section class="intl-trust-strip" aria-label="International Hospitality Accreditations">
+      <div class="container intl-trust-container">
+        <div class="intl-trust-item">
+          <div class="intl-trust-icon-wrap">
+            <svg class="intl-trust-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <div class="intl-trust-info">
+            <strong class="intl-trust-title">TripAdvisor Travelers' Choice</strong>
+            <span class="intl-trust-sub">Top 10% of Hotels Worldwide</span>
+          </div>
+        </div>
+
+        <div class="intl-trust-divider" aria-hidden="true"></div>
+
+        <div class="intl-trust-item">
+          <div class="intl-trust-icon-wrap">
+            <span class="intl-trust-score">9.4</span>
+          </div>
+          <div class="intl-trust-info">
+            <strong class="intl-trust-title">Booking.com Superb 9.4</strong>
+            <span class="intl-trust-sub">Exceptional International Reviews</span>
+          </div>
+        </div>
+
+        <div class="intl-trust-divider" aria-hidden="true"></div>
+
+        <div class="intl-trust-item">
+          <div class="intl-trust-icon-wrap">
+            <svg class="intl-trust-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="intl-trust-info">
+            <strong class="intl-trust-title">SLTDA Registered Boutique Villa</strong>
+            <span class="intl-trust-sub">Sri Lanka Tourism Authority Certified</span>
+          </div>
+        </div>
+
+        <div class="intl-trust-divider" aria-hidden="true"></div>
+
+        <div class="intl-trust-item">
+          <div class="intl-trust-icon-wrap">
+            <svg class="intl-trust-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <div class="intl-trust-info">
+            <strong class="intl-trust-title">Private Airport Chauffeur</strong>
+            <span class="intl-trust-sub">Direct AC Pickup: Colombo &amp; Mattala</span>
+          </div>
+        </div>
+
+        <div class="intl-trust-divider" aria-hidden="true"></div>
+
+        <div class="intl-trust-item">
+          <div class="intl-trust-icon-wrap">
+            <svg class="intl-trust-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <div class="intl-trust-info">
+            <strong class="intl-trust-title">Direct Booking Guarantee</strong>
+            <span class="intl-trust-sub">Best Rate Direct · Zero Booking Fees</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 03: THE FOREST DEW STORY
+         ========================================================================== -->
+    <section class="story-section section-pad" id="story" aria-label="The Story of Forest Dew">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-copy-panel reveal-fade-up">
+            <span class="eyebrow">An Escape Into Nature</span>
+            <h2 class="display-2">
+              Unrushed Days.<br><em class="gold-shimmer-text">Untamed</em> Surroundings.
+            </h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p class="lead-text">
+              <span class="editorial-dropcap">F</span>orest Dew was established as a serene countryside refuge in Udawalawe, welcoming travelers exploring the wildlife wonders of southern Sri Lanka.
+            </p>
+            <p>
+              Tucked away from crowded tourist thoroughfares, here mornings unfold to bird songs from the canopy, afternoons are spent drifting in the pool, and evenings celebrate fresh island hospitality under open starlit skies.
+            </p>
+
+            <div class="story-pillars">
+              <div class="story-pillar-item">
+                <span class="story-pillar-num">01</span>
+                <span class="story-pillar-title">Authentic Rest</span>
+                <p class="story-pillar-text">Comfortable rooms built to keep you rested and refreshed.</p>
+              </div>
+              <div class="story-pillar-item">
+                <span class="story-pillar-num">02</span>
+                <span class="story-pillar-title">Park Access</span>
+                <p class="story-pillar-text">Private jeep safaris with entrance tickets and essentials arranged.</p>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn-outline">
+              Discover Our Philosophy <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="story-visuals reveal-fade-up delay-2">
+            <div class="story-primary-frame">
+              <img src="assets/images/forest-balcony.webp" alt="Actual Forest Dew treetop terrace overlooking nature canopy" loading="lazy">
+            </div>
+            <div class="story-badge-card card-light-beam">
+              <span>Authentic Property</span>
+              <p>Real hotel grounds photographed in Udawalawe, Sri Lanka.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 03.5: THE ARCHITECTURAL SANCTUARY & CANOPY GROUNDS
+         ========================================================================== -->
+    <section class="sanctuary-grounds-section section-pad" id="sanctuary" aria-label="Hotel Grounds and Tropical Architecture">
+      <div class="container">
+        <div class="sanctuary-header reveal-fade-up">
+          <div class="sanctuary-header-meta">
+            <span class="hero-kicker-dot dewdrop-radar"></span>
+            <span class="eyebrow" style="margin: 0;">Aerial Perspective · 6.4716° N, 80.8987° E</span>
+          </div>
+          <h2 class="display-2" style="margin: 18px 0 16px;">
+            Immersed in <em class="gold-shimmer-text">Emerald.</em><br>Bounded by Water.
+          </h2>
+          <span class="heading-light-line" aria-hidden="true"></span>
+          <p class="lead-text" style="max-width: 780px;">
+            Forest Dew is situated amidst the fertile green buffer of Udawalawe National Park and the tranquil reservoir lake. A secluded sanctuary where modern architectural calm meets the breathing rhythm of Sri Lanka’s untamed wilderness.
+          </p>
+        </div>
+
+        <!-- Luxury Interactive Split Showcase Grid -->
+        <div class="sanctuary-grid">
+          <!-- Left: Big Aerial Landscape Card with Badges -->
+          <div class="sanctuary-aerial-card card-light-beam reveal-clip-right">
+            <div class="sanctuary-img-wrap img-hover-zoom">
+              <img src="assets/images/hotel-aerial-canopy.jpg" alt="Aerial panorama of Forest Dew Udawalawa nestled in lush forest canopy near the reservoir lake" loading="lazy">
+              <div class="sanctuary-card-gradient"></div>
+              <div class="sanctuary-badge-overlay top-left">
+                <span class="sanctuary-pill">✦ Lake &amp; Forest Sanctuary</span>
+              </div>
+              <div class="sanctuary-badge-overlay bottom-left">
+                <span class="sanctuary-caption-title">The Canopy Panorama</span>
+                <span class="sanctuary-caption-sub">Actual drone photography of Forest Dew and surrounding Udawalawe nature belt</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Architectural Guest Wing Card & Features -->
+          <div class="sanctuary-facade-card card-light-beam reveal-fade-up delay-1">
+            <div class="sanctuary-img-wrap img-hover-zoom">
+              <img src="assets/images/hotel-exterior-facade.jpg" alt="Two-storey boutique white guest wing with glass balconies, terrace loungers, and tropical elephant ear leaves" loading="lazy">
+              <div class="sanctuary-card-gradient"></div>
+              <div class="sanctuary-badge-overlay top-right">
+                <span class="sanctuary-pill gold">✦ Genuine Property Facade</span>
+              </div>
+              <div class="sanctuary-badge-overlay bottom-left">
+                <span class="sanctuary-caption-title">Boutique Guest Wing</span>
+                <span class="sanctuary-caption-sub">Private upper balconies &amp; shaded ground garden terraces</span>
+              </div>
+            </div>
+
+            <!-- Architectural Highlights List -->
+            <div class="sanctuary-features-box">
+              <div class="sanctuary-feature-item">
+                <div class="feature-bullet"></div>
+                <div>
+                  <strong>Tropical Open-Air Living:</strong>
+                  <span>Spacious verandas and glass-front balconies designed for gentle forest breezes and birdsong.</span>
+                </div>
+              </div>
+              <div class="sanctuary-feature-item">
+                <div class="feature-bullet"></div>
+                <div>
+                  <strong>Native Jungle Garden:</strong>
+                  <span>Framed by giant elephant ear plants, green lawns, and mature shade trees native to the Sabaragamuwa basin.</span>
+                </div>
+              </div>
+              <div class="sanctuary-feature-item">
+                <div class="feature-bullet"></div>
+                <div>
+                  <strong>Quiet Seclusion:</strong>
+                  <span>Tucked away from noisy tourist thoroughfares, offering peaceful nights after exhilarating wildlife safaris.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 04: ROOMS & STAYS
+         ========================================================================== -->
+    <section class="rooms-editorial-section section-pad" id="rooms" aria-label="Accommodation at Forest Dew">
+      <div class="container">
+        <div class="section-header-editorial reveal-fade-up">
+          <div class="section-header-col-left">
+            <span class="eyebrow">Accommodation</span>
+            <h2 class="display-2">
+              Spaces Designed to <em class="gold-shimmer-text">Unwind.</em>
+            </h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p class="lead-text">
+              Four curated room categories offering genuine comfort and flexible meal options for every travel style.
+            </p>
+          </div>
+          <div class="section-header-col-right">
+            <a href="rooms.html" class="btn-text">
+              View All 16 Rate Combinations <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="room-showcase-grid">
+          <!-- Room 01: Single Room -->
+          <article class="room-card card-light-beam reveal-fade-up" id="room-single" data-room-key="single">
+            <div class="room-card-img-wrap">
+              <img src="assets/images/room-single-terracotta-full.jpg" alt="Single Room at Forest Dew with terracotta feature wall and king bed" loading="lazy">
+              <img src="assets/images/room-single-desk-view.jpg" alt="Single Room vanity desk with electric kettle and tea set" class="room-img-hover-secondary" loading="lazy">
+              <span class="room-card-tag">Real Property Photo</span>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">01 / Solo Traveler Sanctuary</span>
+              <h3 class="room-card-title">Single Room</h3>
+              <p class="room-card-desc">
+                A quiet, peaceful sanctuary tailored for independent adventurers and wildlife photographers. Warm terracotta tones, dedicated work vanity with electric tea kettle, and unhurried calm.
+              </p>
+              <!-- Interactive Meal Plan Switcher Pills -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Single Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 6,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 7,500)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 9,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 10,500)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 6,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="6000">(~$20 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="rooms.html#single" class="btn-text">Rate Plans <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+                  <a href="plan-stay.html?room=single&plan=ro#builder" class="btn btn-graphite btn-room-book" style="padding: 10px 18px; font-size: 0.72rem;">Enquire ↗</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Room 02: Double Room -->
+          <article class="room-card card-light-beam reveal-fade-up delay-1" id="room-double" data-room-key="double">
+            <div class="room-card-img-wrap">
+              <img src="assets/images/room-double-romantic.jpg" alt="Double Room at Forest Dew featuring romantic swan towel origami and flower petals" loading="lazy">
+              <img src="assets/images/room-single-terracotta-full.jpg" alt="Spacious Double Room interior perspective" class="room-img-hover-secondary" loading="lazy">
+              <span class="room-card-tag">Real Property Photo</span>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">02 / Rest for Two</span>
+              <h3 class="room-card-title">Double Room</h3>
+              <p class="room-card-desc">
+                Generously proportioned bedroom with dual sleeping comfort, gentle cross-ventilation, forest garden outlooks, and bespoke romantic swan towel art adorned with fresh petals.
+              </p>
+              <!-- Interactive Meal Plan Switcher Pills -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Double Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 10,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 13,000)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 16,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 19,000)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 10,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="10000">(~$33 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="rooms.html#double" class="btn-text">Rate Plans <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+                  <a href="plan-stay.html?room=double&plan=ro#builder" class="btn btn-graphite btn-room-book" style="padding: 10px 18px; font-size: 0.72rem;">Enquire ↗</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Room 03: Triple Room -->
+          <article class="room-card card-light-beam reveal-fade-up delay-2" id="room-triple" data-room-key="triple">
+            <div class="room-card-img-wrap">
+              <img src="assets/images/guest-room-lounge.webp" alt="Triple room interior with comfortable furniture" loading="lazy">
+              <span class="room-card-tag">Real Property Photo</span>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">03 / Shared Journey</span>
+              <h3 class="room-card-title">Triple Room</h3>
+              <p class="room-card-desc">
+                Ideal for small groups and companion travelers. Spacious footprint designed to allow everyone room to unpack, relax, and share stories.
+              </p>
+              <!-- Interactive Meal Plan Switcher Pills -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Triple Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 17,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 21,500)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 26,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 30,500)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 17,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="17000">(~$57 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="rooms.html#triple" class="btn-text">Rate Plans <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+                  <a href="plan-stay.html?room=triple&plan=ro#builder" class="btn btn-graphite btn-room-book" style="padding: 10px 18px; font-size: 0.72rem;">Enquire ↗</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Room 04: Family Room -->
+          <article class="room-card card-light-beam reveal-fade-up delay-3" id="room-family" data-room-key="family">
+            <div class="room-card-img-wrap">
+              <img src="assets/images/guest-room-forest.webp" alt="Family accommodation at Forest Dew Udawalawa" loading="lazy">
+              <span class="room-card-tag">Real Property Photo</span>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">04 / The Family Suite</span>
+              <h3 class="room-card-title">Family Room</h3>
+              <p class="room-card-desc">
+                Thoughtfully arranged for families visiting Udawalawe. Unhurried comfort, safe surrounds, and direct garden access to keep everyone happy.
+              </p>
+              <!-- Interactive Meal Plan Switcher Pills -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Family Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 20,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 26,000)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 32,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 38,000)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 20,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="20000">(~$67 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="rooms.html#family" class="btn-text">Rate Plans <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+                  <a href="plan-stay.html?room=family&plan=ro#builder" class="btn btn-graphite btn-room-book" style="padding: 10px 18px; font-size: 0.72rem;">Enquire ↗</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 05: SWIMMING POOL IMMERSION
+         ========================================================================== -->
+    <section class="pool-immersion-section section-pad" id="pool" aria-label="Swimming Pool Facilities">
+      <div class="container">
+        <div class="pool-grid">
+          <div class="pool-visual-frame card-light-beam reveal-clip-right">
+            <img src="assets/images/swimming-pool.webp" alt="Outdoor swimming pool at Forest Dew Udawalawa nestled in garden" loading="lazy">
+            <div class="pool-caption-overlay">Actual Swimming Pool at Forest Dew</div>
+          </div>
+
+          <div class="pool-copy-col reveal-fade-up">
+            <span class="eyebrow eyebrow-dark">Tranquil Waters</span>
+            <h2>
+              Slow Down.<br><em class="gold-shimmer-text">Stay a Little</em> Longer.
+            </h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p>
+              After an exhilarating dawn safari across Udawalawe's plains, nothing restores the spirit like plunging into the cool waters of our outdoor pool.
+            </p>
+            <div class="pool-features-list">
+              <div class="pool-feature-item">
+                <span class="pool-feature-icon"></span>
+                <span>Freshwater swimming pool for cooling off in tropical heat</span>
+              </div>
+              <div class="pool-feature-item">
+                <span class="pool-feature-icon"></span>
+                <span>Lush poolside environment surrounded by green coconut trees</span>
+              </div>
+              <div class="pool-feature-item">
+                <span class="pool-feature-icon"></span>
+                <span>Open garden terrace for post-swim lounging and reading</span>
+              </div>
+            </div>
+            <a href="experiences.html" class="btn btn-gold">
+              Explore Hotel Spaces <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 06: UDAWALAWE SAFARI EXPERIENCES
+         ========================================================================== -->
+    <section class="safari-editorial-section section-pad" id="safari" aria-label="Udawalawe Safari Packages">
+      <div class="container">
+        <!-- Safari Hero Visual Banner -->
+        <div class="safari-hero-banner reveal-fade-up">
+          <img src="assets/images/hero-forest-elephants.webp" alt="Artistic tribute to the wild elephants of Udawalawe National Park" loading="lazy">
+          <div class="safari-hero-overlay">
+            <div class="safari-hero-text-block">
+              <span class="eyebrow eyebrow-dark">Wildlife Safari Expeditions</span>
+              <h2>Into the <em class="gold-shimmer-text">Wild.</em></h2>
+              <span class="heading-light-line" aria-hidden="true"></span>
+              <p>Experience the majesty of Asian elephants roaming free across Udawalawe National Park in their natural sanctuary.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Safari Interactive Group Switcher -->
+        <div class="safari-toolbar reveal-fade-up">
+          <span class="party-selector-label">Select Group Size (Updates Rates Instantly):</span>
+          <div class="party-btn-group" role="group" aria-label="Safari group size selector">
+            <button type="button" class="party-btn is-active" data-party-btn="2" aria-pressed="true">2 Persons</button>
+            <button type="button" class="party-btn" data-party-btn="4" aria-pressed="false">4 Persons</button>
+          </div>
+        </div>
+
+        <!-- Safari 3 Packages Grid -->
+        <div class="safari-cards-grid">
+          <!-- Package 01: 4-Hour Safari -->
+          <article class="safari-card card-light-beam reveal-fade-up">
+            <span class="safari-duration-badge">01 / 4 Hours</span>
+            <h3 class="safari-card-title">4-Hour Safari</h3>
+            <p class="safari-card-desc">
+              The essential morning or late afternoon game drive focusing on high-activity wildlife hours around primary water sources.
+            </p>
+            <div class="safari-price-block">
+              <div class="safari-price-row">
+                <span class="safari-price-val" data-safari-val="short">USD 125</span>
+                <span class="safari-price-intl" data-intl-usd="125"></span>
+                <span class="safari-price-meta">/ total for <strong data-group-label>2 guests</strong></span>
+              </div>
+            </div>
+            <span class="safari-inclusions-title">Package Inclusions:</span>
+            <ul class="safari-inclusions-list">
+              <li>Private 4x4 safari jeep with driver</li>
+              <li>National Park entrance tickets</li>
+              <li>Chilled bottled drinking water</li>
+              <li>High-power wildlife binoculars</li>
+            </ul>
+            <button type="button" class="btn btn-graphite" data-safari-enquire="short">
+              Enquire About Safari <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+          <!-- Package 02: Half-Day Safari -->
+          <article class="safari-card featured card-light-beam reveal-fade-up delay-1">
+            <span class="safari-featured-badge">Most Popular</span>
+            <span class="safari-duration-badge">02 / Half-Day (~6 Hours)</span>
+            <h3 class="safari-card-title">Half-Day Safari</h3>
+            <p class="safari-card-desc">
+              Deeper exploration venturing through varied habitats, scrublands, and lake shores with time for leisurely tracking.
+            </p>
+            <div class="safari-price-block">
+              <div class="safari-price-row">
+                <span class="safari-price-val" data-safari-val="half">USD 160</span>
+                <span class="safari-price-intl" data-intl-usd="160"></span>
+                <span class="safari-price-meta">/ total for <strong data-group-label>2 guests</strong></span>
+              </div>
+            </div>
+            <span class="safari-inclusions-title">Package Inclusions:</span>
+            <ul class="safari-inclusions-list">
+              <li>Private 4x4 safari jeep with driver</li>
+              <li>National Park entrance tickets</li>
+              <li>Chilled bottled drinking water</li>
+              <li>High-power wildlife binoculars</li>
+              <li>Fresh packed picnic breakfast</li>
+            </ul>
+            <button type="button" class="btn btn-gold" data-safari-enquire="half">
+              Enquire About Safari <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+          <!-- Package 03: Full-Day Safari -->
+          <article class="safari-card card-light-beam reveal-fade-up delay-2">
+            <span class="safari-duration-badge">03 / Full-Day Immersion</span>
+            <h3 class="safari-card-title">Full-Day Safari</h3>
+            <p class="safari-card-desc">
+              The complete day in the wild. Experience the full rhythm of the reserve from early morning golden hour to sunset.
+            </p>
+            <div class="safari-price-block">
+              <div class="safari-price-row">
+                <span class="safari-price-val" data-safari-val="full">USD 180</span>
+                <span class="safari-price-intl" data-intl-usd="180"></span>
+                <span class="safari-price-meta">/ total for <strong data-group-label>2 guests</strong></span>
+              </div>
+            </div>
+            <span class="safari-inclusions-title">Package Inclusions:</span>
+            <ul class="safari-inclusions-list">
+              <li>Private 4x4 safari jeep with driver</li>
+              <li>National Park entrance tickets</li>
+              <li>Chilled bottled drinking water</li>
+              <li>High-power wildlife binoculars</li>
+              <li>Fresh breakfast + Full picnic lunch</li>
+            </ul>
+            <button type="button" class="btn btn-graphite" data-safari-enquire="full">
+              Enquire About Safari <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 07: DINING & HOSPITALITY
+         ========================================================================== -->
+    <section class="dining-section section-pad" id="dining" aria-label="Dining and Restaurant">
+      <div class="container">
+        <div class="dining-grid">
+          <div class="dining-copy reveal-fade-up">
+            <span class="eyebrow">Local Flavors &amp; Hospitality</span>
+            <h2 class="display-2">
+              Moments Around<br>the <em>Table.</em>
+            </h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p class="lead-text">
+              Gather in our welcoming on-site dining space for freshly prepared meals before sunrise game drives and unhurried dinners under the evening breeze.
+            </p>
+            <p>
+              We offer four flexible meal-plan structures to match your stay schedule:
+            </p>
+
+            <div class="meal-plan-pills">
+              <div class="meal-plan-pill">
+                <strong>R/O · Room Only</strong>
+                <span>Pure accommodation flexibility</span>
+              </div>
+              <div class="meal-plan-pill">
+                <strong>B/B · Bed &amp; Breakfast</strong>
+                <span>Includes freshly cooked morning breakfast</span>
+              </div>
+              <div class="meal-plan-pill">
+                <strong>H/B · Half Board</strong>
+                <span>Includes daily breakfast &amp; evening dinner</span>
+              </div>
+              <div class="meal-plan-pill">
+                <strong>F/B · Full Board</strong>
+                <span>Includes breakfast, lunch &amp; evening dinner</span>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-outline">
+              Ask About Dining Options <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="dining-visuals reveal-fade-up delay-2">
+            <img src="assets/images/restaurant-tables.webp" alt="Real dining tables and restaurant space at Forest Dew Udawalawa" class="dining-main-img" loading="lazy">
+            <div class="dining-sub-img-card card-light-beam">
+              <img src="assets/images/restaurant-interior.webp" alt="Restaurant interior seating at Forest Dew" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 08: HOTEL PHOTO JOURNAL
+         ========================================================================== -->
+    <section class="gallery-journal-section section-pad" id="gallery" aria-label="Hotel Photo Gallery">
+      <div class="container">
+        <div class="section-header-editorial reveal-fade-up" style="text-align: center; display: block; margin-bottom: 40px;">
+          <span class="eyebrow" style="justify-content: center;">Visual Postcards</span>
+          <h2 class="display-2">The Photo <em class="gold-shimmer-text">Journal.</em></h2>
+          <span class="heading-light-line is-centered" aria-hidden="true"></span>
+          <p class="lead-text" style="max-width: 600px; margin: 0 auto;">
+            Explore real photographs of Forest Dew’s spaces, suites, swimming pool, and the wild beauty of Udawalawe.
+          </p>
+        </div>
+
+        <!-- Filter Toolbar -->
+        <div class="gallery-filter-toolbar reveal-fade-up" role="group" aria-label="Filter gallery photographs">
+          <button type="button" class="gallery-filter-btn is-active" data-gallery-filter="all" aria-pressed="true">All Moments</button>
+          <button type="button" class="gallery-filter-btn" data-gallery-filter="rooms" aria-pressed="false">Rooms</button>
+          <button type="button" class="gallery-filter-btn" data-gallery-filter="pool" aria-pressed="false">Swimming Pool</button>
+          <button type="button" class="gallery-filter-btn" data-gallery-filter="dining" aria-pressed="false">Dining</button>
+          <button type="button" class="gallery-filter-btn" data-gallery-filter="spaces" aria-pressed="false">Hotel Spaces</button>
+          <button type="button" class="gallery-filter-btn" data-gallery-filter="nature" aria-pressed="false">Nature &amp; Wild</button>
+        </div>
+
+        <!-- Mosaic Grid -->
+        <div class="gallery-mosaic-grid">
+          <!-- Item 1: Romantic Double Room (wide) -->
+          <div class="gallery-mosaic-item wide reveal-fade-up" data-gallery-item data-gallery-category="rooms" data-lightbox-src="assets/images/room-double-romantic.jpg" data-lightbox-caption="Deluxe Double Room at Forest Dew — Romantic swan folded towel origami and freshly gathered floral petals" tabindex="0" role="button" aria-label="Enlarge romantic double room photo">
+            <img src="assets/images/room-double-romantic.jpg" alt="Deluxe Double Room at Forest Dew featuring romantic swan folded towel origami and flower petals" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">Romantic Double Suite · Swan Welcome</span>
+              <span class="gallery-caption-cat">Rooms ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Swimming Pool -->
+          <div class="gallery-mosaic-item reveal-fade-up delay-1" data-gallery-item data-gallery-category="pool" data-lightbox-src="assets/images/swimming-pool.webp" data-lightbox-caption="Outdoor freshwater swimming pool framed by garden greenery" tabindex="0" role="button" aria-label="Enlarge pool photo">
+            <img src="assets/images/swimming-pool.webp" alt="Outdoor freshwater swimming pool framed by garden greenery" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">Poolside Stillness</span>
+              <span class="gallery-caption-cat">Pool ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Dining Area -->
+          <div class="gallery-mosaic-item reveal-fade-up" data-gallery-item data-gallery-category="dining" data-lightbox-src="assets/images/restaurant-tables.webp" data-lightbox-caption="Comfortable dining tables arranged for shared meals" tabindex="0" role="button" aria-label="Enlarge dining photo">
+            <img src="assets/images/restaurant-tables.webp" alt="Comfortable dining tables arranged for shared meals" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">Dining Terrace</span>
+              <span class="gallery-caption-cat">Dining ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Hotel Reception -->
+          <div class="gallery-mosaic-item reveal-fade-up delay-1" data-gallery-item data-gallery-category="spaces" data-lightbox-src="assets/images/hotel-reception.webp" data-lightbox-caption="Front desk with the official Forest Dew emblem" tabindex="0" role="button" aria-label="Enlarge reception photo">
+            <img src="assets/images/hotel-reception.webp" alt="Front desk with the official Forest Dew emblem" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">Hotel Reception</span>
+              <span class="gallery-caption-cat">Spaces ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Single Room Terracotta -->
+          <div class="gallery-mosaic-item reveal-fade-up delay-2" data-gallery-item data-gallery-category="rooms" data-lightbox-src="assets/images/room-single-terracotta-full.jpg" data-lightbox-caption="Single Room Suite at Forest Dew — Terracotta architectural feature wall and king bed" tabindex="0" role="button" aria-label="Enlarge single room photo">
+            <img src="assets/images/room-single-terracotta-full.jpg" alt="Single Room Suite at Forest Dew — Terracotta architectural feature wall and king bed" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">Single Room Terracotta Sanctuary</span>
+              <span class="gallery-caption-cat">Rooms ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 6: In-Room Tea Desk -->
+          <div class="gallery-mosaic-item reveal-fade-up" data-gallery-item data-gallery-category="rooms" data-lightbox-src="assets/images/room-single-desk-view.jpg" data-lightbox-caption="In-room tea kettle, mineral water bottles, and writing vanity desk" tabindex="0" role="button" aria-label="Enlarge tea desk photo">
+            <img src="assets/images/room-single-desk-view.jpg" alt="In-room tea kettle, mineral water bottles, and writing vanity desk" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">In-Room Tea &amp; Vanity Desk</span>
+              <span class="gallery-caption-cat">Rooms ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Wildlife Vision (wide) -->
+          <div class="gallery-mosaic-item wide reveal-fade-up delay-1" data-gallery-item data-gallery-category="nature" data-lightbox-src="assets/images/hero-forest-elephants.webp" data-lightbox-caption="Illustrative artwork representing Udawalawe's elephant sanctuary" tabindex="0" role="button" aria-label="Enlarge wildlife artwork">
+            <img src="assets/images/hero-forest-elephants.webp" alt="Illustrative artwork representing Udawalawe's elephant sanctuary" loading="lazy">
+            <div class="gallery-mosaic-caption">
+              <span class="gallery-caption-title">The Spirit of Udawalawe</span>
+              <span class="gallery-caption-cat">Artwork ↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal Container -->
+    <div class="lightbox-modal" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Enlarged photo modal">
+      <button type="button" class="lightbox-close-btn" aria-label="Close photo preview">×</button>
+      <div class="lightbox-inner">
+        <div class="lightbox-img-wrap">
+          <img src="" alt="" class="lightbox-img">
+        </div>
+        <p class="lightbox-caption-text"></p>
+      </div>
+    </div>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 09: DISCOVER UDAWALAWE
+         ========================================================================== -->
+    <section class="destination-section section-pad" id="destination" aria-label="Destination Storytelling">
+      <div class="container">
+        <div class="destination-grid">
+          <div class="destination-copy reveal-fade-up">
+            <span class="eyebrow eyebrow-dark">Southern Sri Lanka</span>
+            <h2 class="display-2">
+              The Untamed<br>Heart of <em class="gold-shimmer-text">Udawalawe.</em>
+            </h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p>
+              Udawalawe is renowned worldwide as one of the premier elephant sanctuaries in Asia. Spread across an expansive reservoir basin, its open grasslands and marshes provide year-round grazing for hundreds of wild Asian elephants.
+            </p>
+            <p>
+              Beyond elephants, the park is an avian wonderland home to crested serpent eagles, painted storks, peacocks, water monitor lizards, and spotted deer. Settle in at Forest Dew, and let the wilderness unfold at your pace.
+            </p>
+
+            <div class="destination-stats-row">
+              <div class="stat-item">
+                <span class="stat-num">30,000+</span>
+                <span class="stat-label">Hectares Protected</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">400+</span>
+                <span class="stat-label">Wild Elephants</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">180+</span>
+                <span class="stat-label">Bird Species</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-frame card-light-beam reveal-fade-up delay-2">
+            <img src="assets/images/hero-forest-elephants.webp" alt="Wild elephants in grassland landscape at sunset" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 10: INTERNATIONAL ARRIVAL & CONCIERGE SERVICES (Aman Standard)
+         ========================================================================== -->
+    <section class="intl-services-section section-pad" id="intl-services" aria-label="International Traveler Arrival and Concierge Services">
+      <div class="container">
+        <div class="section-header-editorial reveal-fade-up text-center" style="max-width: 780px; margin: 0 auto 50px;">
+          <span class="eyebrow">Seamless International Journeys</span>
+          <h2 class="display-2">Tailored for the <em class="gold-shimmer-text">Global Traveler.</em></h2>
+          <span class="heading-light-line" aria-hidden="true"></span>
+          <p class="lead-text">
+            From seamless private airport chauffeur pickups to bespoke dietary planning and certified safari naturalists, every facet of your retreat is curated to international 5-star boutique standards.
+          </p>
+        </div>
+
+        <div class="intl-services-grid">
+          <div class="intl-service-card card-light-beam reveal-fade-up">
+            <div class="intl-service-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h3 class="intl-service-title">Private AC Airport Chauffeur</h3>
+            <p class="intl-service-desc">
+              Direct private vehicle transfer from Bandaranaike Intl (BIA Colombo, ~3.5h via Southern Expressway) or Mattala Intl (HRI, ~45m), plus cross-island connections to Ella, Mirissa, and Galle.
+            </p>
+            <span class="intl-service-meta">Meet &amp; Greet with luggage assistance</span>
+          </div>
+
+          <div class="intl-service-card card-light-beam reveal-fade-up delay-1">
+            <div class="intl-service-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h3 class="intl-service-title">Certified Safari Naturalists</h3>
+            <p class="intl-service-desc">
+              Our private 4x4 game drives are led by experienced English-speaking naturalists with deep tracking knowledge of elephant herd dynamics, leopard behavior, and endemic bird migrations.
+            </p>
+            <span class="intl-service-meta">Binoculars &amp; park permits included</span>
+          </div>
+
+          <div class="intl-service-card card-light-beam reveal-fade-up delay-2">
+            <div class="intl-service-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="intl-service-title">Global Dietary Excellence</h3>
+            <p class="intl-service-desc">
+              Farm-to-table organic Ceylon cuisine tailored to all dietary requirements: Vegan, Vegetarian, Halal, Gluten-Free, and classic Western Continental breakfast selections.
+            </p>
+            <span class="intl-service-meta">5:30 AM takeaway safari breakfast hampers</span>
+          </div>
+
+          <div class="intl-service-card card-light-beam reveal-fade-up delay-3">
+            <div class="intl-service-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            </div>
+            <h3 class="intl-service-title">High-Speed Starlink &amp; Fiber Wi-Fi</h3>
+            <p class="intl-service-desc">
+              Uninterrupted high-speed wireless coverage throughout guest rooms, pool terraces, and dining lounges — ideal for digital nomads and remote international professionals.
+            </p>
+            <span class="intl-service-meta">Reliable connection in the wilderness</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 11: VOICES OF UDAWALAWE — INTERNATIONAL TESTIMONIALS
+         ========================================================================== -->
+    <section class="intl-reviews-section section-pad" id="testimonials" aria-label="International Guest Reviews and Testimonials">
+      <div class="container">
+        <div class="section-header-editorial reveal-fade-up text-center" style="max-width: 760px; margin: 0 auto 50px;">
+          <span class="eyebrow">Verified Global Experiences</span>
+          <h2 class="display-2">Voices of <em class="gold-shimmer-text">Udawalawe.</em></h2>
+          <span class="heading-light-line" aria-hidden="true"></span>
+          <p class="lead-text">
+            Read what international travelers from around the world say about their stays, private game drives, and warm hospitality at Forest Dew.
+          </p>
+        </div>
+
+        <div class="intl-reviews-grid">
+          <!-- Review 01: UK -->
+          <article class="intl-review-card card-light-beam reveal-fade-up">
+            <div class="intl-review-header">
+              <div class="intl-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="intl-review-badge">TripAdvisor</span>
+            </div>
+            <blockquote class="intl-review-quote">
+              "An unforgettable sanctuary on the doorstep of Udawalawe. Spotting wild elephant herds with babies at sunrise and returning to the cool freshwater pool was sheer magic. The staff could not have been more attentive."
+            </blockquote>
+            <div class="intl-reviewer-meta">
+              <div class="intl-reviewer-avatar" aria-hidden="true">🇬🇧</div>
+              <div class="intl-reviewer-details">
+                <strong class="intl-reviewer-name">Julian &amp; Claire M.</strong>
+                <span class="intl-reviewer-location">London, United Kingdom</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 02: Germany -->
+          <article class="intl-review-card card-light-beam reveal-fade-up delay-1">
+            <div class="intl-review-header">
+              <div class="intl-review-stars" aria-label="10 out of 10 score">★★★★★ <span class="intl-score-pill">10 / 10</span></div>
+              <span class="intl-review-badge">Booking.com</span>
+            </div>
+            <blockquote class="intl-review-quote">
+              "Impeccable boutique hospitality! The hotel organized our private 4x4 safari with an outstanding naturalist who found elephants, jackals, and rare eagles. The authentic Sri Lankan hoppers breakfast was a culinary highlight."
+            </blockquote>
+            <div class="intl-reviewer-meta">
+              <div class="intl-reviewer-avatar" aria-hidden="true">🇩🇪</div>
+              <div class="intl-reviewer-details">
+                <strong class="intl-reviewer-name">Maximilian &amp; Sophie V.</strong>
+                <span class="intl-reviewer-location">Munich, Germany</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 03: Australia -->
+          <article class="intl-review-card card-light-beam reveal-fade-up delay-2">
+            <div class="intl-review-header">
+              <div class="intl-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="intl-review-badge">Google Verified</span>
+            </div>
+            <blockquote class="intl-review-quote">
+              "The perfect tranquil stop on our Sri Lanka holiday. Pristine rooms, incredible tropical bird watching right from our balcony, and a seamless private car transfer arranged directly from Colombo airport."
+            </blockquote>
+            <div class="intl-reviewer-meta">
+              <div class="intl-reviewer-avatar" aria-hidden="true">🇦🇺</div>
+              <div class="intl-reviewer-details">
+                <strong class="intl-reviewer-name">Sarah &amp; Liam K.</strong>
+                <span class="intl-reviewer-location">Melbourne, Australia</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 04: Switzerland -->
+          <article class="intl-review-card card-light-beam reveal-fade-up delay-3">
+            <div class="intl-review-header">
+              <div class="intl-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="intl-review-badge">TripAdvisor</span>
+            </div>
+            <blockquote class="intl-review-quote">
+              "Exceptional value and peaceful atmosphere. We loved the serene garden setting away from dusty traffic, the delicious farm-fresh fruit juices, and the warm Sri Lankan welcome. Highly recommend the half-day safari!"
+            </blockquote>
+            <div class="intl-reviewer-meta">
+              <div class="intl-reviewer-avatar" aria-hidden="true">🇨🇭</div>
+              <div class="intl-reviewer-details">
+                <strong class="intl-reviewer-name">Elena &amp; Marc R.</strong>
+                <span class="intl-reviewer-location">Zurich, Switzerland</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         SECTION 12: CONTACT & RESERVATIONS STRIP
+         ========================================================================== -->
+    <section class="cta-banner-section section-pad-sm" id="reserve-cta" aria-label="Reservation Enquiry Strip">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text reveal-fade-up">
+          <span class="eyebrow">Direct Boutique Reservations</span>
+          <h2 class="display-3">Your Escape <em class="gold-shimmer-text">Begins Here.</em></h2>
+          <span class="heading-light-line" aria-hidden="true"></span>
+          <p>Talk directly with our team in Udawalawe to plan your rooms, meals, and safari game drives.</p>
+        </div>
+        <div class="cta-banner-actions reveal-fade-up delay-1">
+          <a href="plan-stay.html" class="btn btn-graphite">
+            Plan Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://wa.me/94766386132" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            WhatsApp Us ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Creative Light Motion Line Divider -->
+  <div class="light-motion-line" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <div class="footer-brand-lockup">
+            <img src="assets/images/logo-mark.png" alt="Forest Dew Logo" class="footer-brand-logo" width="48" height="48">
+            <div class="brand-words">
+              <span class="brand-name" style="color: var(--soft-chalk);">Forest Dew</span>
+              <span class="brand-sub">Udawalawa</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A contemporary boutique safari hotel located near Udawalawe National Park, Sri Lanka. Offering comfortable accommodation, pool, dining, and private guided safari game drives.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+            <li><a href="room-details.html">Accommodation Details</a></li>
+            <li><a href="safari.html">Safari Packages</a></li>
+            <li><a href="experiences.html">Hotel Experiences</a></li>
+            <li><a href="gallery.html">Photo Journal</a></li>
+            <li><a href="about.html">About Forest Dew</a></li>
+          </ul>
+        </div>
+
+        <!-- Planning & Enquiries -->
+        <div>
+          <h4 class="footer-col-title">Enquiries</h4>
+          <ul class="footer-nav-list">
+            <li><a href="plan-stay.html">Build Your Itinerary</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="https://wa.me/94766386132" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><a href="privacy.html">Privacy &amp; Photo Credits</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h4 class="footer-col-title">Location</h4>
+          <div class="footer-contact-details">
+            <address style="font-style: normal;">
+              Forest Dew Udawalawa<br>
+              484/1 C.P. De Silva Road<br>
+              Udawalawa, 70190, Sri Lanka
+            </address>
+            <p>
+              Telephone: <a href="tel:+94766386132">+94 76 638 6132</a>
+            </p>
+            <p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Forest+Dew+Udawalawa+484%2F1+C.P.+De+Silva+Road" target="_blank" rel="noopener noreferrer" class="btn-text" style="color: var(--natural-sand);">
+                Open in Google Maps ↗
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architectural Watermark -->
+      <div class="footer-watermark" aria-hidden="true">FOREST DEW</div>
+
+      <!-- Footer Bottom Copyright & Credits -->
+      <div class="footer-bottom-bar">
+        <span>&copy; <span data-current-year>2026</span> Forest Dew Udawalawa. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#credits">Image Credits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- International Luxury Floating Concierge (WhatsApp) -->
+  <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%20Udawalawa%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." class="luxury-concierge-pill" aria-label="Direct WhatsApp Concierge" target="_blank" rel="noopener noreferrer">
+    <div class="concierge-avatar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L4 20.5l1.3-4.1a8.5 8.5 0 1 1 15.2-4.6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 9c-.3.4-.8 1.4-.4 2.2.7 1.8 3.2 4.2 5 4.7.8.2 1.5-.4 1.9-.9l-1.6-1.2-1.1.7c-1.2-.6-2.1-1.6-2.7-2.8l.8-1L9.5 9Z" fill="currentColor"/>
+      </svg>
+      <span class="concierge-pulse" aria-hidden="true"></span>
+    </div>
+    <div class="concierge-text">
+      <span class="concierge-title">Hotel Concierge</span>
+      <span class="concierge-status">Online · Udawalawe</span>
+    </div>
+  </a>
+
+  <!-- Mobile Sticky Reservation Dock -->
+  <div class="mobile-sticky-dock" aria-label="Mobile reservation actions">
+    <div class="mobile-dock-grid">
+      <a href="plan-stay.html" class="btn btn-gold" style="padding: 12px; font-size: 0.72rem;">
+        Plan Stay ↗
+      </a>
+      <a href="https://wa.me/94766386132" class="btn btn-outline-light" style="padding: 12px; font-size: 0.72rem;" target="_blank" rel="noopener noreferrer">
+        WhatsApp ↗
+      </a>
+    </div>
+  </div>
+</body>
+</html>

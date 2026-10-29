@@ -618,6 +618,15 @@
   text-shadow: 0 0 24px rgba(215, 171, 80, 0.25);
 }
 
+/* Light Mode Gold Shimmer: Deep Burnished Ceylon Gold (Never Disappears on White/Cream) */
+[data-theme="light"] .gold-shimmer-text {
+  background: linear-gradient(90deg, #9E7428 0%, #D4A747 25%, #855C15 50%, #D4A747 75%, #9E7428 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
 @keyframes textGoldShine {
   0% {
     background-position: 0% center;
@@ -768,10 +777,6 @@
 }
 
 /* 9. Header Bottom Horizon Light Line on Scroll */
-.site-header {
-  position: relative;
-}
-
 .site-header.scrolled::after {
   content: '';
   position: absolute;

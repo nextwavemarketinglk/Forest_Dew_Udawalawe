@@ -19,7 +19,8 @@
   <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
   <script>
     (function(){
-      var t = localStorage.getItem('fd_theme');
+      var t = null;
+      try { t = localStorage.getItem('fd_theme'); } catch (e) { /* Storage unavailable in this browser. */ }
       if (t) { document.documentElement.setAttribute('data-theme', t); }
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -48,6 +49,15 @@
 
   <!-- Header -->
   <header class="site-header header-dark" id="site-header">
+    <!-- International Pre-Header Utility Ribbon -->
+    <div class="intl-topbar" id="intl-topbar">
+      <div class="container intl-topbar-container">
+        <div class="intl-topbar-weather">
+          <span class="intl-live-dot" aria-hidden="true"></span>
+          <span>Udawalawe Sanctuary · <strong id="intl-local-time">--:--</strong> <small>(GMT+5:30)</small> · 29°C Safari Weather · Fair Skies</span>
+        </div>
+      </div>
+    </div>
     <div class="container header-container">
       <a href="index.html" class="brand" aria-label="Forest Dew Udawalawa — Return to homepage">
         <div class="brand-emblem-wrap">

@@ -97,12 +97,12 @@ html, body {
     gap: 20px;
   }
 
-  .intl-topbar-container {
-    gap: 10px;
+  .intl-topbar {
+    padding: 5px 0;
   }
-
-  .intl-airport-guide {
-    display: none;
+  .intl-topbar-weather {
+    font-size: 0.68rem;
+    gap: 6px;
   }
   
   .room-showcase-grid {
@@ -271,19 +271,16 @@ html, body {
   }
 
   .intl-topbar {
-    padding: 5px 0;
-    font-size: 0.65rem;
+    padding: 4px 0;
+    font-size: 0.64rem;
   }
 
-  .intl-topbar-right .currency-selector {
-    display: none;
+  .intl-topbar-weather {
+    font-size: 0.64rem;
+    gap: 5px;
   }
 
-  .intl-live-pill small {
-    display: none;
-  }
-
-  .intl-topbar-divider {
+  .intl-topbar-weather small {
     display: none;
   }
 

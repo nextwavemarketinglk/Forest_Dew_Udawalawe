@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<script>
+  localStorage.setItem('fd_theme', 'light');
+  document.documentElement.setAttribute('data-theme', 'light');
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191D1C">
+  <title>Rooms &amp; Rates | Forest Dew Udawalawa Boutique Safari Hotel</title>
+  <meta name="description" content="View authentic accommodation photographs, room descriptions and verified rates for Single, Double, Triple and Family rooms at Forest Dew Udawalawa, Sri Lanka.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forest Dew Udawalawa">
+  <meta property="og:title" content="Rooms &amp; Rates | Forest Dew Udawalawa">
+  <meta property="og:description" content="Comfortable boutique hotel accommodation in Udawalawe. All 16 verified rate plans across Room Only, Bed & Breakfast, Half Board and Full Board.">
+  <meta property="og:image" content="assets/images/room-double-romantic.jpg">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('fd_theme');
+      if (t) { document.documentElement.setAttribute('data-theme', t); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/booking.js"></script>
+</head>
+<body data-page="rooms">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header header-dark" id="site-header">
+    <!-- International Pre-Header Utility Ribbon -->
+    <div class="intl-topbar" id="intl-topbar">
+      <div class="container intl-topbar-container">
+        <div class="intl-topbar-weather">
+          <span class="intl-live-dot" aria-hidden="true"></span>
+          <span>Udawalawe Sanctuary · <strong id="intl-local-time">--:--</strong> <small>(GMT+5:30)</small> · 29°C Safari Weather · Fair Skies</span>
+        </div>
+      </div>
+    </div>
+    <div class="container header-container">
+      <a href="index.html" class="brand" aria-label="Forest Dew Udawalawa — Return to homepage">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/logo-mark.png" alt="Forest Dew Emblem" class="brand-emblem" width="40" height="40">
+        </div>
+        <div class="brand-words">
+          <span class="brand-name">Forest Dew</span>
+          <span class="brand-sub">Udawalawa</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" data-link="home">Home</a>
+        <a href="rooms.html" class="nav-link active" data-link="rooms" aria-current="page">Rooms &amp; Rates</a>
+        <a href="safari.html" class="nav-link" data-link="safari">Safari</a>
+        <a href="experiences.html" class="nav-link" data-link="experiences">Experiences</a>
+        <a href="gallery.html" class="nav-link" data-link="gallery">Gallery</a>
+        <a href="about.html" class="nav-link" data-link="about">About</a>
+        <a href="contact.html" class="nav-link" data-link="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+94766386132" class="header-phone" aria-label="Call Forest Dew Reception">
+          <span>+94 76 638 6132</span>
+        </a>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="plan-stay.html" class="header-cta">
+          Plan Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span class="eyebrow eyebrow-dark" style="margin: 0;">Boutique Safari Stay · Udawalawe</span>
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation Menu">
+        <a href="index.html" class="mobile-drawer-link" data-link="home">Home <span>01</span></a>
+        <a href="rooms.html" class="mobile-drawer-link active" data-link="rooms">Rooms &amp; Rates <span>02</span></a>
+        <a href="safari.html" class="mobile-drawer-link" data-link="safari">Safari Adventures <span>03</span></a>
+        <a href="experiences.html" class="mobile-drawer-link" data-link="experiences">Hotel Experiences <span>04</span></a>
+        <a href="gallery.html" class="mobile-drawer-link" data-link="gallery">Photo Journal <span>05</span></a>
+        <a href="plan-stay.html" class="mobile-drawer-link" data-link="planner">Plan Your Stay <span>06</span></a>
+        <a href="about.html" class="mobile-drawer-link" data-link="about">About Forest Dew <span>07</span></a>
+        <a href="contact.html" class="mobile-drawer-link" data-link="contact">Contact &amp; Location <span>08</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="tel:+94766386132" class="mobile-drawer-phone">+94 76 638 6132 ↗</a>
+      <p class="mobile-drawer-address">484/1 C.P. De Silva Road, Udawalawa, 70190, Sri Lanka</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero-editorial" aria-label="Accommodation Hero">
+      <div class="page-hero-bg">
+        <img src="assets/images/hotel-exterior-facade.jpg" alt="Two-storey boutique white guest wing with glass balconies and garden terraces at Forest Dew" fetchpriority="high">
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow eyebrow-dark">Accommodation Collection</span>
+        <div class="hero-light-accent-beam" aria-hidden="true"></div>
+        <h1 class="page-hero-title">
+          Rest Easy in the<br><em class="gold-shimmer-text">Forest Light.</em>
+        </h1>
+        <p class="page-hero-lead">
+          Thoughtfully arranged guest suites featuring private balconies and garden terraces, natural light, peaceful forest breezes, and flexible dining plans for your journey in Udawalawe.
+        </p>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- Rooms List Section -->
+    <section class="section-pad" id="room-collection" aria-label="Room Categories">
+      <div class="container">
+        <!-- Honest Property Photography Disclaimer -->
+        <div style="background-color: var(--bg-surface); border: 1px solid var(--border-card); padding: 20px 24px; border-radius: var(--radius-sm); margin-bottom: 40px;" class="card-light-beam reveal-fade-up">
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            <strong style="color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem;">Authentic Photography Notice:</strong> All photographs displayed below are genuine, color-graded property photos of Forest Dew Udawalawa rooms and amenities. Specific room configurations and romantic turn-downs can be pre-arranged directly via enquiry.
+          </p>
+        </div>
+
+        <!-- Creative Interactive Signature Showcase -->
+        <div class="room-experience-showcase reveal-fade-up">
+          <div class="showcase-header-wrap">
+            <span class="eyebrow">Signature Living Spaces</span>
+            <h2 class="display-3">Crafted for Romance &amp; <em class="gold-shimmer-text">Restorative Solitude.</em></h2>
+            <p class="showcase-lead">
+              Every detail in our rooms is tailored for your comfort in Udawalawe — from celebratory swan origami turn-downs with fresh petals to tranquil earth-toned sanctuaries with dedicated tea stations.
+            </p>
+          </div>
+
+          <!-- Showcase Navigation Tabs -->
+          <div class="showcase-tabs-nav" role="tablist" aria-label="Accommodation experiences">
+            <button type="button" class="showcase-tab-trigger is-active" data-showcase-target="pane-romance" aria-pressed="true">
+              <span>🦢</span> The Romantic Honeymoon Bed
+            </button>
+            <button type="button" class="showcase-tab-trigger" data-showcase-target="pane-sanctuary" aria-pressed="false">
+              <span>🌿</span> Earth Sanctuary &amp; Workspace
+            </button>
+            <button type="button" class="showcase-tab-trigger" data-showcase-target="pane-hospitality" aria-pressed="false">
+              <span>☕</span> In-Room Hospitality Station
+            </button>
+          </div>
+
+          <!-- Pane 1: Romantic Honeymoon -->
+          <div class="showcase-pane is-active" id="pane-romance">
+            <div class="showcase-visual-col">
+              <img src="assets/images/room-double-romantic.jpg" alt="Deluxe Double Room romantic turn-down with swan towel origami and flower petals">
+              <!-- Interactive Hotspots -->
+              <div class="showcase-hotspot" style="top: 72%; left: 40%;" tabindex="0" aria-label="Handcrafted Swan Towel Art">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Handcrafted Swan Origami &amp; Fresh Petals</div>
+              </div>
+              <div class="showcase-hotspot" style="top: 38%; left: 18%;" tabindex="0" aria-label="Warm Bedside Lighting">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Warm Ambient Bedside Sconces</div>
+              </div>
+              <div class="showcase-hotspot" style="top: 35%; left: 82%;" tabindex="0" aria-label="Nightstand with Storage">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Dedicated Nightstand with Lock &amp; Key</div>
+              </div>
+            </div>
+            <div class="showcase-info-col">
+              <span class="showcase-tag">✦ Double Room · Honeymoon Styling</span>
+              <h3 class="showcase-title">Intimate Welcomes for Two</h3>
+              <p class="showcase-lead">
+                Celebrate anniversaries and romantic safari escapes. Our team prepares bespoke heart-and-swan towel artistry scattered with freshly picked tropical petals to greet your arrival.
+              </p>
+              <ul class="showcase-feature-list">
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Plush Double Bedding:</strong> Crisp white linen, dual supportive pillows and botanical bolster cushions.</div>
+                </li>
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Atmospheric Evening Sconces:</strong> Gentle wall-mounted lighting for quiet reading after safari adventures.</div>
+                </li>
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Pool &amp; Dining Proximity:</strong> Step out directly to our freshwater pool and open-air garden terrace.</div>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="#double" class="btn btn-gold" style="padding: 12px 24px; font-size: 0.76rem;">View Double Rates ↗</a>
+                <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%2C%20I%20would%20like%20to%20reserve%20a%20Double%20Room%20with%20romantic%20decor." class="btn btn-outline" style="padding: 12px 24px; font-size: 0.76rem;" target="_blank" rel="noopener noreferrer">Request Decor on WhatsApp ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Earth Sanctuary -->
+          <div class="showcase-pane" id="pane-sanctuary">
+            <div class="showcase-visual-col">
+              <img src="assets/images/room-single-terracotta-full.jpg" alt="Single Room with warm terracotta wall and full suite view">
+              <div class="showcase-hotspot" style="top: 25%; left: 60%;" tabindex="0" aria-label="Terracotta Feature Wall">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Warm Terracotta Earthen Finish</div>
+              </div>
+              <div class="showcase-hotspot" style="top: 60%; left: 45%;" tabindex="0" aria-label="Plush King Bed">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Restorative King/Queen Bedding</div>
+              </div>
+              <div class="showcase-hotspot" style="top: 50%; left: 20%;" tabindex="0" aria-label="Hospitality Desk">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Dedicated Desk &amp; Hospitality Setup</div>
+              </div>
+            </div>
+            <div class="showcase-info-col">
+              <span class="showcase-tag">✦ Single Room · Earth Warmth</span>
+              <h3 class="showcase-title">Tranquil Solitude for Creators</h3>
+              <p class="showcase-lead">
+                Immerse yourself in soothing natural earth pigments and uninterrupted quietude. Perfect for wildlife photographers and solo nature wanderers recharging between dawn and dusk game drives.
+              </p>
+              <ul class="showcase-feature-list">
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Restorative Deep Sleep:</strong> Comfortable mattress with traditional golden floral runner and accent pillows.</div>
+                </li>
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Natural Ventilation:</strong> High ceilings and cool tiled flooring keeping the climate fresh and pleasant.</div>
+                </li>
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>En-Suite Privacy:</strong> Spotless bathroom with clean towels, toiletries, and hot water showers.</div>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="#single" class="btn btn-gold" style="padding: 12px 24px; font-size: 0.76rem;">View Single Rates ↗</a>
+                <a href="plan-stay.html?room=single&plan=ro#builder" class="btn btn-outline" style="padding: 12px 24px; font-size: 0.76rem;">Plan Solo Stay ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3: In-Room Hospitality Station -->
+          <div class="showcase-pane" id="pane-hospitality">
+            <div class="showcase-visual-col">
+              <img src="assets/images/room-single-desk-view.jpg" alt="In-room amenities showcasing tea kettle and writing vanity">
+              <div class="showcase-hotspot" style="top: 48%; left: 34%;" tabindex="0" aria-label="Electric Kettle & Tea Setup">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Electric Kettle &amp; Complimentary Pure Water</div>
+              </div>
+              <div class="showcase-hotspot" style="top: 60%; left: 24%;" tabindex="0" aria-label="Writing Desk & Vanity Stool">
+                <span>✦</span>
+                <div class="showcase-hotspot-tooltip">Workstation &amp; Memory Card Backup Desk</div>
+              </div>
+            </div>
+            <div class="showcase-info-col">
+              <span class="showcase-tag">✦ Thoughtful Touches · Forest Dew Care</span>
+              <h3 class="showcase-title">Hospitality at Your Fingertips</h3>
+              <p class="showcase-lead">
+                Start your early safari morning with a steaming cup of Ceylon tea brewed right inside your room. A dedicated vanity and workstation provides ample room to review camera equipment and journals.
+              </p>
+              <ul class="showcase-feature-list">
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Complimentary Bottled Water:</strong> Fresh sealed drinking water replenished daily.</div>
+                </li>
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Photographer Work Desk:</strong> Convenient wall power sockets for charging cameras, drones, and phones.</div>
+                </li>
+                <li class="showcase-feature-item">
+                  <span class="showcase-feature-bullet">✦</span>
+                  <div><strong>Early Safari Tea Packs:</strong> Electric kettle ready for your 5:30 AM dawn game drive departure.</div>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="room-details.html" class="btn btn-gold" style="padding: 12px 24px; font-size: 0.76rem;">Full Room Details ↗</a>
+                <a href="#rates-table" class="btn btn-outline" style="padding: 12px 24px; font-size: 0.76rem;">View All 16 Rate Combinations ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 60px;">
+          <!-- 01: Single Room -->
+          <article class="room-card room-card-horizontal card-light-beam reveal-fade-up" id="single" data-room-key="single">
+            <div class="room-card-img-wrap room-gallery-slider" data-room-slider>
+              <div class="room-gallery-slides">
+                <img src="assets/images/room-single-terracotta-full.jpg" alt="Single Room at Forest Dew Udawalawa with terracotta wall and king bed" class="room-gallery-slide is-active" loading="lazy">
+                <img src="assets/images/room-single-desk-view.jpg" alt="Single Room hospitality amenities showing vanity desk and tea kettle" class="room-gallery-slide" loading="lazy">
+              </div>
+              <div class="room-card-badges">
+                <div class="room-card-tag-group">
+                  <span class="room-card-tag room-tag-gold"><span class="sparkle-dot"></span>Real Hotel Photo</span>
+                  <span class="room-card-tag-sub">Terracotta Suite</span>
+                </div>
+                <button type="button" class="room-zoom-btn" aria-label="Enlarge single room photo" data-zoom-img="assets/images/room-single-terracotta-full.jpg" data-zoom-caption="Single Room Suite at Forest Dew Udawalawa — Terracotta feature wall, plush king bed and tranquil natural setting">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+              <div class="room-slider-controls">
+                <div class="room-view-tabs" role="tablist" aria-label="Single Room views">
+                  <button type="button" class="room-view-tab is-active" aria-pressed="true" role="tab">
+                    <span>🛏 Suite View</span>
+                  </button>
+                  <button type="button" class="room-view-tab" aria-pressed="false" role="tab">
+                    <span>☕ Tea Desk</span>
+                  </button>
+                </div>
+                <div class="room-nav-arrows">
+                  <button type="button" class="room-arrow-btn room-arrow-prev" aria-label="Previous image">‹</button>
+                  <button type="button" class="room-arrow-btn room-arrow-next" aria-label="Next image">›</button>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">Room Category 01</span>
+              <h2 class="room-card-title">Single Room</h2>
+              <p class="room-card-desc">
+                An intimate, tranquil sanctuary featuring warm terracotta architecture, dedicated writing and vanity desk with electric kettle, and quiet garden breezes. Designed for solo explorers and safari photographers seeking unbroken sleep.
+              </p>
+              <div class="room-features-grid">
+                <div>✓ Terracotta feature wall</div>
+                <div>✓ In-room tea kettle &amp; desk</div>
+                <div>✓ Private en-suite bathroom</div>
+                <div>✓ Fast Wi-Fi &amp; garden breeze</div>
+              </div>
+              <!-- Interactive Meal Plan Switcher -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Single Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 6,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 7,500)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 9,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 10,500)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 6,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="6000">(~$20 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="#rates-table" class="btn-text">All Plans ↗</a>
+                  <button type="button" class="btn btn-graphite" data-select-room="single">Calculate Stay ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02: Double Room -->
+          <article class="room-card room-card-horizontal card-light-beam reveal-fade-up" id="double" data-room-key="double">
+            <div class="room-card-img-wrap room-gallery-slider" data-room-slider>
+              <div class="room-gallery-slides">
+                <img src="assets/images/room-double-romantic.jpg" alt="Double Room at Forest Dew featuring romantic swan towel origami and flower petals" class="room-gallery-slide is-active" loading="lazy">
+                <img src="assets/images/room-single-terracotta-full.jpg" alt="Double Room spacious suite angle" class="room-gallery-slide" loading="lazy">
+              </div>
+              <div class="room-card-badges">
+                <div class="room-card-tag-group">
+                  <span class="room-card-tag room-tag-gold"><span class="sparkle-dot"></span>Real Hotel Photo</span>
+                  <span class="room-card-tag-sub">Romantic Setup</span>
+                </div>
+                <button type="button" class="room-zoom-btn" aria-label="Enlarge double room photo" data-zoom-img="assets/images/room-double-romantic.jpg" data-zoom-caption="Double Room at Forest Dew Udawalawa — Romantic swan towel origami and fresh flower petals arranged for couples &amp; honeymooners">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+              <div class="room-slider-controls">
+                <div class="room-view-tabs" role="tablist" aria-label="Double Room views">
+                  <button type="button" class="room-view-tab is-active" aria-pressed="true" role="tab">
+                    <span>🦢 Romantic Swans</span>
+                  </button>
+                  <button type="button" class="room-view-tab" aria-pressed="false" role="tab">
+                    <span>🛏 Suite Layout</span>
+                  </button>
+                </div>
+                <div class="room-nav-arrows">
+                  <button type="button" class="room-arrow-btn room-arrow-prev" aria-label="Previous image">‹</button>
+                  <button type="button" class="room-arrow-btn room-arrow-next" aria-label="Next image">›</button>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">Room Category 02</span>
+              <h2 class="room-card-title">Double Room</h2>
+              <p class="room-card-desc">
+                Generously proportioned bedroom with king/dual sleeping comfort, garden-facing doors, and bespoke romantic swan towel art adorned with fresh blossoms. Curated for couples and traveling partners seeking unhurried calm.
+              </p>
+              <div class="room-features-grid">
+                <div>✓ Romantic towel art on request</div>
+                <div>✓ Bedside nightstands &amp; sconces</div>
+                <div>✓ Garden terrace outlook</div>
+                <div>✓ Easy swimming pool access</div>
+              </div>
+              <!-- Interactive Meal Plan Switcher -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Double Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 10,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 13,000)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 16,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 19,000)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 10,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="10000">(~$33 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="#rates-table" class="btn-text">All Plans ↗</a>
+                  <button type="button" class="btn btn-graphite" data-select-room="double">Calculate Stay ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03: Triple Room -->
+          <article class="room-card room-card-horizontal card-light-beam reveal-fade-up" id="triple" data-room-key="triple">
+            <div class="room-card-img-wrap">
+              <img src="assets/images/guest-room-lounge.webp" alt="Triple Room at Forest Dew with spacious seating" loading="lazy">
+              <span class="room-card-tag">Real Hotel Photo</span>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">Room Category 03</span>
+              <h2 class="room-card-title">Triple Room</h2>
+              <p class="room-card-desc">
+                Ideal accommodation for companions and small travel groups exploring southern Sri Lanka together. Generous footprint with comfortable seating amenities, allowing everyone room to unpack and relax.
+              </p>
+              <div class="room-features-grid">
+                <div>✓ Accommodates 3 guests</div>
+                <div>✓ In-room lounge furniture</div>
+                <div>✓ Peaceful green surrounds</div>
+                <div>✓ Daily room upkeep</div>
+              </div>
+              <!-- Interactive Meal Plan Switcher -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Triple Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 17,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 21,500)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 26,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 30,500)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 17,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="17000">(~$57 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="#rates-table" class="btn-text">All Plans ↗</a>
+                  <button type="button" class="btn btn-graphite" data-select-room="triple">Calculate Stay ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04: Family Room -->
+          <article class="room-card room-card-horizontal card-light-beam reveal-fade-up" id="family" data-room-key="family">
+            <div class="room-card-img-wrap">
+              <img src="assets/images/guest-room-forest.webp" alt="Family Room at Forest Dew with generous layout" loading="lazy">
+              <span class="room-card-tag">Real Hotel Photo</span>
+            </div>
+            <div class="room-card-body">
+              <span class="room-card-index">Room Category 04</span>
+              <h2 class="room-card-title">Family Room</h2>
+              <p class="room-card-desc">
+                Designed to comfortably accommodate families visiting the elephant sanctuary of Udawalawe. Ample space for parents and children, secure surroundings, and seamless access to on-site dining and swimming pool.
+              </p>
+              <div class="room-features-grid">
+                <div>✓ Family-friendly dimensions</div>
+                <div>✓ Multiple sleeping arrangements</div>
+                <div>✓ Easy pool &amp; dining access</div>
+                <div>✓ Nature grounds view</div>
+              </div>
+              <!-- Interactive Meal Plan Switcher -->
+              <div class="room-plan-pills-row" role="group" aria-label="Select meal plan for Family Room">
+                <button type="button" class="room-plan-pill is-active" data-room-plan-pill="ro" aria-pressed="true" title="Room Only (LKR 20,000)">R/O</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="bb" aria-pressed="false" title="Bed &amp; Breakfast (LKR 26,000)">B/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="hb" aria-pressed="false" title="Half Board (LKR 32,000)">H/B</button>
+                <button type="button" class="room-plan-pill" data-room-plan-pill="fb" aria-pressed="false" title="Full Board (LKR 38,000)">F/B</button>
+              </div>
+              <div class="room-card-rate-row">
+                <div class="room-card-rate-col">
+                  <span class="room-card-rate-label">Indicative Rate · From</span>
+                  <div class="room-card-price">LKR 20,000 <span>/ night</span> <span class="room-card-price-intl" data-intl-lkr="20000">(~$67 USD)</span></div>
+                </div>
+                <div class="room-card-actions">
+                  <a href="#rates-table" class="btn-text">All Plans ↗</a>
+                  <button type="button" class="btn btn-graphite" data-select-room="family">Calculate Stay ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Traveling Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         EXACT CLIENT DATA: ALL 16 RATES MATRIX TABLE
+         ========================================================================== -->
+    <section class="section-pad" id="rates-table" style="background-color: var(--bg-surface-elevated);" aria-label="Official Rate Matrix">
+      <div class="container">
+        <div class="section-header-editorial reveal-fade-up">
+          <div class="section-header-col-left">
+            <span class="eyebrow">Exact Hotel Tariff</span>
+            <h2 class="display-2">Room Rates &amp; <em class="gold-shimmer-text">Meal Plans.</em></h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p class="lead-text">
+              All 16 exact published rates provided by Forest Dew Udawalawa, quoted in Sri Lankan Rupees (LKR).
+            </p>
+          </div>
+          <div class="section-header-col-right">
+            <span style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted);">Nightly Rates · Subject to Hotel Confirmation</span>
+          </div>
+        </div>
+
+        <div class="rate-matrix-card card-light-beam reveal-fade-up">
+          <table class="rate-table">
+            <thead>
+              <tr>
+                <th scope="col">Room Category</th>
+                <th scope="col">R/O <small style="display: block; font-weight: 400; text-transform: none; letter-spacing: normal;">Room Only</small></th>
+                <th scope="col">B/B <small style="display: block; font-weight: 400; text-transform: none; letter-spacing: normal;">Bed &amp; Breakfast</small></th>
+                <th scope="col">H/B <small style="display: block; font-weight: 400; text-transform: none; letter-spacing: normal;">Half Board</small></th>
+                <th scope="col">F/B <small style="display: block; font-weight: 400; text-transform: none; letter-spacing: normal;">Full Board</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600;">Single Room</th>
+                <td><strong>LKR 6,000</strong></td>
+                <td><strong>LKR 7,500</strong></td>
+                <td><strong>LKR 9,000</strong></td>
+                <td><strong>LKR 10,500</strong></td>
+              </tr>
+              <tr>
+                <th scope="row" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600;">Double Room</th>
+                <td><strong>LKR 10,000</strong></td>
+                <td><strong>LKR 13,000</strong></td>
+                <td><strong>LKR 16,000</strong></td>
+                <td><strong>LKR 19,000</strong></td>
+              </tr>
+              <tr>
+                <th scope="row" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600;">Triple Room</th>
+                <td><strong>LKR 17,000</strong></td>
+                <td><strong>LKR 21,500</strong></td>
+                <td><strong>LKR 26,000</strong></td>
+                <td><strong>LKR 30,500</strong></td>
+              </tr>
+              <tr>
+                <th scope="row" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600;">Family Room</th>
+                <td><strong>LKR 20,000</strong></td>
+                <td><strong>LKR 26,000</strong></td>
+                <td><strong>LKR 32,000</strong></td>
+                <td><strong>LKR 38,000</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="meal-key-grid reveal-fade-up">
+          <div><strong style="color: var(--graphite);">R/O (Room Only):</strong> Accommodation without meal services included.</div>
+          <div><strong style="color: var(--graphite);">B/B (Bed &amp; Breakfast):</strong> Includes cooked morning breakfast for registered guests.</div>
+          <div><strong style="color: var(--graphite);">H/B (Half Board):</strong> Includes morning breakfast and evening dinner.</div>
+          <div><strong style="color: var(--graphite);">F/B (Full Board):</strong> Includes breakfast, midday lunch, and evening dinner.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE LIVE ROOM ESTIMATOR (JAVASCRIPT)
+         ========================================================================== -->
+    <section class="section-pad" id="room-estimator-section" aria-label="Interactive Room Rate Estimator">
+      <div class="container">
+        <div class="rate-calc-box card-light-beam reveal-fade-up">
+          <div style="max-width: 600px; margin-bottom: 30px;">
+            <span class="eyebrow">Interactive Estimator</span>
+            <h2 class="display-3">Calculate Your <em>Accommodation.</em></h2>
+            <span class="heading-light-line" aria-hidden="true"></span>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Select your room type, meal plan, and tentative dates for an instant indicative estimate before enquiring with the hotel team.
+            </p>
+          </div>
+
+          <form id="room-rate-calculator" novalidate>
+            <div class="form-grid-2col">
+              <div class="form-field">
+                <label class="form-label" for="calc-room">Room Category</label>
+                <select id="calc-room" name="room" class="form-select">
+                  <option value="single">Single Room</option>
+                  <option value="double" selected>Double Room</option>
+                  <option value="triple">Triple Room</option>
+                  <option value="family">Family Room</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="calc-plan">Meal Plan</label>
+                <select id="calc-plan" name="plan" class="form-select">
+                  <option value="ro">Room Only (R/O)</option>
+                  <option value="bb" selected>Bed &amp; Breakfast (B/B)</option>
+                  <option value="hb">Half Board (H/B)</option>
+                  <option value="fb">Full Board (F/B)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2col">
+              <div class="form-field">
+                <label class="form-label" for="calc-checkin">Check-in Date</label>
+                <input type="date" id="calc-checkin" name="checkin" class="form-input" required>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="calc-checkout">Check-out Date</label>
+                <input type="date" id="calc-checkout" name="checkout" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="calc-output-display">
+              <div>
+                <span style="font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Indicative Total (LKR)</span>
+                <div class="calc-output-val" id="room-calc-total">LKR 13,000 / night</div>
+                <small id="room-calc-breakdown" style="font-size: 0.78rem; color: var(--text-light); margin-top: 4px; display: block;">Select arrival and departure dates to calculate.</small>
+              </div>
+              <button type="submit" class="btn btn-graphite" style="padding: 16px 28px;">
+                Enquire This Stay via WhatsApp ↗
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Traveling Light Motion Line Divider -->
+  <div class="light-motion-line" aria-hidden="true"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand-lockup">
+            <img src="assets/images/logo-mark.png" alt="Forest Dew Logo" class="footer-brand-logo" width="48" height="48">
+            <div class="brand-words">
+              <span class="brand-name" style="color: var(--soft-chalk);">Forest Dew</span>
+              <span class="brand-sub">Udawalawa</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A contemporary boutique safari hotel located near Udawalawe National Park, Sri Lanka. Offering comfortable accommodation, pool, dining, and private guided safari game drives.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+            <li><a href="room-details.html">Accommodation Details</a></li>
+            <li><a href="safari.html">Safari Packages</a></li>
+            <li><a href="experiences.html">Hotel Experiences</a></li>
+            <li><a href="gallery.html">Photo Journal</a></li>
+            <li><a href="about.html">About Forest Dew</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Enquiries</h4>
+          <ul class="footer-nav-list">
+            <li><a href="plan-stay.html">Build Your Itinerary</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="https://wa.me/94766386132" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><a href="privacy.html">Privacy &amp; Photo Credits</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Location</h4>
+          <div class="footer-contact-details">
+            <address style="font-style: normal;">
+              Forest Dew Udawalawa<br>
+              484/1 C.P. De Silva Road<br>
+              Udawalawa, 70190, Sri Lanka
+            </address>
+            <p>Telephone: <a href="tel:+94766386132">+94 76 638 6132</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark" aria-hidden="true">FOREST DEW</div>
+      <div class="footer-bottom-bar">
+        <span>&copy; <span data-current-year>2026</span> Forest Dew Udawalawa. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#credits">Image Credits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- International Luxury Floating Concierge (WhatsApp) -->
+  <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%20Udawalawa%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." class="luxury-concierge-pill" aria-label="Direct WhatsApp Concierge" target="_blank" rel="noopener noreferrer">
+    <div class="concierge-avatar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L4 20.5l1.3-4.1a8.5 8.5 0 1 1 15.2-4.6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 9c-.3.4-.8 1.4-.4 2.2.7 1.8 3.2 4.2 5 4.7.8.2 1.5-.4 1.9-.9l-1.6-1.2-1.1.7c-1.2-.6-2.1-1.6-2.7-2.8l.8-1L9.5 9Z" fill="currentColor"/>
+      </svg>
+      <span class="concierge-pulse" aria-hidden="true"></span>
+    </div>
+    <div class="concierge-text">
+      <span class="concierge-title">Hotel Concierge</span>
+      <span class="concierge-status">Online · Udawalawe</span>
+    </div>
+  </a>
+  <!-- Accessible Lightbox Modal -->
+  <div class="lightbox-modal" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Expanded room photo view">
+    <button type="button" class="lightbox-close-btn" aria-label="Close photo preview">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" class="lightbox-img">
+      </div>
+      <p class="lightbox-caption-text"></p>
+    </div>
+  </div>
+
+  <div class="mobile-sticky-dock" aria-label="Mobile reservation actions">
+    <div class="mobile-dock-grid">
+      <a href="plan-stay.html" class="btn btn-gold" style="padding: 12px; font-size: 0.72rem;">Plan Stay ↗</a>
+      <a href="https://wa.me/94766386132" class="btn btn-outline-light" style="padding: 12px; font-size: 0.72rem;" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+    </div>
+  </div>
+</body>
+</html>

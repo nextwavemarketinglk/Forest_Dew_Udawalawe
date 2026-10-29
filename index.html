@@ -53,7 +53,8 @@
   <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
   <script>
     (function(){
-      var t = localStorage.getItem('fd_theme');
+      var t = null;
+      try { t = localStorage.getItem('fd_theme'); } catch (e) { /* Storage unavailable in this browser. */ }
       if (t) { document.documentElement.setAttribute('data-theme', t); }
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -98,38 +99,9 @@
          ========================================================================== -->
     <div class="intl-topbar" id="intl-topbar">
       <div class="container intl-topbar-container">
-        <div class="intl-topbar-left">
-          <span class="intl-live-pill">
-            <span class="intl-live-dot" aria-hidden="true"></span>
-            <span>Udawalawe <strong id="intl-local-time">16:30</strong> <small>(GMT+5:30)</small> · 29°C Safari Weather</span>
-          </span>
-          <span class="intl-topbar-divider" aria-hidden="true"></span>
-          <span class="intl-airport-guide">
-            <svg class="intl-icon-plane" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
-            <span>Mattala (HRI) 45m · Colombo (BIA) 3.5h · Chauffeur Available</span>
-          </span>
-        </div>
-
-        <div class="intl-topbar-right">
-          <!-- Interactive Multi-Currency Switcher -->
-          <div class="currency-selector" role="group" aria-label="Select currency">
-            <span class="currency-label">Currency:</span>
-            <div class="currency-pills">
-              <button type="button" class="currency-pill is-active" data-currency="USD" aria-pressed="true" title="View in US Dollars">USD ($)</button>
-              <button type="button" class="currency-pill" data-currency="EUR" aria-pressed="false" title="View in Euros">EUR (€)</button>
-              <button type="button" class="currency-pill" data-currency="GBP" aria-pressed="false" title="View in British Pounds">GBP (£)</button>
-              <button type="button" class="currency-pill" data-currency="AUD" aria-pressed="false" title="View in Australian Dollars">AUD (A$)</button>
-              <button type="button" class="currency-pill" data-currency="LKR" aria-pressed="false" title="View in Sri Lankan Rupees">LKR (Rs)</button>
-            </div>
-          </div>
-
-          <span class="intl-topbar-divider" aria-hidden="true"></span>
-
-          <!-- Direct VIP WhatsApp Concierge -->
-          <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%20Concierge%2C%20I%20am%20planning%20an%20international%20trip%20to%20Udawalawe.%20Could%20you%20assist%20me%3F" target="_blank" rel="noopener noreferrer" class="intl-vip-link" title="Chat with Hotel Concierge on WhatsApp">
-            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.147-.525-1.743-.722-2.868-2.508-2.955-2.624-.087-.116-.708-.941-.708-1.796 0-.855.449-1.277.608-1.451.16-.174.348-.217.464-.217.116 0 .232.001.333.006.107.005.249-.041.39.298.144.347.491 1.2.535 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.2.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.55-.679.115-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.044.071.044.419-.1 8.244z"/></svg>
-            <span>VIP Concierge</span>
-          </a>
+        <div class="intl-topbar-weather">
+          <span class="intl-live-dot" aria-hidden="true"></span>
+          <span>Udawalawe Sanctuary · <strong id="intl-local-time">--:--</strong> <small>(GMT+5:30)</small> · 29°C Safari Weather · Fair Skies</span>
         </div>
       </div>
     </div>
@@ -202,18 +174,6 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-      </div>
-
-      <!-- Mobile International Currency Switcher -->
-      <div class="mobile-currency-wrap">
-        <span class="mobile-currency-label">Display Currency:</span>
-        <div class="currency-pills mobile-currency-pills">
-          <button type="button" class="currency-pill is-active" data-currency="USD">USD ($)</button>
-          <button type="button" class="currency-pill" data-currency="EUR">EUR (€)</button>
-          <button type="button" class="currency-pill" data-currency="GBP">GBP (£)</button>
-          <button type="button" class="currency-pill" data-currency="AUD">AUD (A$)</button>
-          <button type="button" class="currency-pill" data-currency="LKR">LKR (Rs)</button>
-        </div>
       </div>
 
       <nav class="mobile-drawer-nav" aria-label="Mobile Navigation Menu">

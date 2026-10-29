@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body data-page="rooms">
+  <header class="site-header header-dark" id="site-header">
+    <div class="container header-container">
+      <nav class="desktop-nav">
+        <a href="rooms.html" class="nav-link">Rooms</a>
+      </nav>
+    </div>
+  </header>
+  <pre id="out"></pre>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const el = document.querySelector('.site-header');
+      const rules = [];
+      for (const sheet of document.styleSheets) {
+        try {
+          for (const rule of sheet.cssRules) {
+            if (rule.selectorText && el.matches(rule.selectorText)) {
+              rules.push({ selector: rule.selectorText, bg: rule.style.backgroundColor, pos: rule.style.position });
+            }
+          }
+        } catch(e) {}
+      }
+      document.getElementById('out').textContent = JSON.stringify(rules, null, 2);
+    });
+  </script>
+</body>
+</html>

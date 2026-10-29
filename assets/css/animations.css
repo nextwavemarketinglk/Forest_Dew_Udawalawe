@@ -1,0 +1,1436 @@
+/* ==========================================================================
+   FOREST DEW UDAWALAWA — MOTION & ANIMATION SYSTEM
+   International Boutique Luxury Standards (GSAP + Pure CSS fallbacks)
+   ========================================================================== */
+
+/* Motion Tokens */
+:root {
+  --anim-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --anim-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --anim-ease-spring: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Base Reveal States for Intersection Observer & CSS Fallbacks */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--anim-ease-out), transform 0.8s var(--anim-ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade-in {
+  opacity: 0;
+  transition: opacity 0.9s var(--anim-ease-out);
+  will-change: opacity;
+}
+
+.reveal-fade-in.is-revealed {
+  opacity: 1;
+}
+
+.reveal-clip-right {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.1s var(--anim-ease-spring);
+  will-change: clip-path;
+}
+
+.reveal-clip-right.is-revealed {
+  clip-path: inset(0 0% 0 0);
+}
+
+.reveal-clip-up {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.1s var(--anim-ease-spring);
+  will-change: clip-path;
+}
+
+.reveal-clip-up.is-revealed {
+  clip-path: inset(0% 0 0 0);
+}
+
+/* Stagger Delays for Grid Elements */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Cinematic Hero Entrance Keyframes */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScaleIn {
+  0% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   CINEMATIC HERO EDITORIAL TYPOGRAPHY & SMOOTH MOTION
+   ========================================================================== */
+.hero-col-main {
+  position: relative;
+}
+
+.hero-text-aura {
+  position: absolute;
+  top: 5%;
+  left: -8%;
+  width: 116%;
+  height: 95%;
+  background: radial-gradient(ellipse at 35% 45%, rgba(215, 171, 80, 0.16) 0%, rgba(18, 21, 20, 0.42) 55%, transparent 75%);
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
+  animation: heroAuraBreathe 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroAuraBreathe {
+  0% { opacity: 0.6; transform: scale(0.95) translate3d(0, 0, 0); }
+  100% { opacity: 0.95; transform: scale(1.05) translate3d(8px, -6px, 0); }
+}
+
+/* ==========================================================================
+   AWARD-WINNING KINETIC HERO TITLE (Awwwards / Boutique Luxury Style)
+   Masked character reveal + Caustic Liquid Gold + Celestial Starlight Sparkle
+   ========================================================================== */
+.hero-title,
+.hero-kinetic-title {
+  position: relative;
+  z-index: 2;
+  perspective: 1000px;
+  margin-bottom: 26px;
+}
+
+.hero-title-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.06em;
+  white-space: nowrap;
+}
+
+.hero-word,
+.hero-title-word {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: baseline;
+  margin-right: 0.28em;
+}
+
+.hero-word:last-child,
+.hero-title-word:last-child {
+  margin-right: 0;
+}
+
+/* Individual Split-Character Kinetic Glissando Entrance */
+.hero-kinetic-title .char {
+  display: inline-block;
+  vertical-align: baseline;
+  will-change: transform, opacity, filter;
+  transform-origin: 50% 100%;
+  animation: kineticCharReveal 1.05s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(0.12s + var(--ci, 0) * 0.024s);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.hero-kinetic-title .char:hover {
+  transform: translateY(-5px) scale(1.05);
+  filter: drop-shadow(0 4px 12px rgba(215, 171, 80, 0.45));
+}
+
+@keyframes kineticCharReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(115%) rotateX(-28deg);
+    filter: blur(3px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0px);
+  }
+}
+
+/* Backwards-compatibility for older word animations */
+.hero-title-line.line-1 .hero-title-word:nth-child(1) { animation-delay: 0.12s; }
+.hero-title-line.line-1 .hero-title-word:nth-child(2) { animation-delay: 0.20s; }
+.hero-title-line.line-1 .hero-title-word:nth-child(3) { animation-delay: 0.28s; }
+.hero-title-line.line-2 .hero-title-word:nth-child(1) { animation-delay: 0.38s; }
+.hero-title-line.line-2 .hero-title-word:nth-child(2) { animation-delay: 0.46s; }
+
+@keyframes heroWordSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(115%) rotate(1.8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* "Wild" Luxury Italic & Caustic Liquid Gold Flow */
+.hero-word-wild {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-glow-word {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 400;
+  font-family: var(--font-display, 'Cormorant Garamond', Georgia, serif);
+  position: relative;
+}
+
+.char-wild {
+  background: linear-gradient(
+    125deg,
+    #FFF9E6 0%,
+    #F5D38A 20%,
+    #D7AB50 42%,
+    #FFF4D9 62%,
+    #ECC875 80%,
+    #D7AB50 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0 2px 14px rgba(215, 171, 80, 0.42));
+  animation: 
+    kineticCharReveal 1.05s cubic-bezier(0.16, 1, 0.3, 1) backwards,
+    wildCausticSweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+    wildAuraGlow 4s ease-in-out infinite alternate !important;
+  animation-delay: 
+    calc(0.12s + var(--ci, 0) * 0.024s),
+    0.85s,
+    0.85s !important;
+}
+
+@keyframes wildCausticSweep {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes wildAuraGlow {
+  0% {
+    filter: drop-shadow(0 2px 10px rgba(215, 171, 80, 0.35));
+  }
+  100% {
+    filter: drop-shadow(0 4px 22px rgba(245, 211, 138, 0.75));
+  }
+}
+
+/* Celestial Starlight Sparkle */
+.wild-sparkle {
+  position: absolute;
+  top: -0.06em;
+  right: -0.42em;
+  font-size: 0.36em;
+  line-height: 1;
+  color: #FFE6A3;
+  display: inline-block;
+  transform-origin: center center;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 0 8px rgba(255, 230, 163, 0.85));
+  animation: 
+    sparkleEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.62s backwards,
+    sparkleTwinklePulse 4.2s ease-in-out 1.55s infinite;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+.wild-sparkle:hover {
+  transform: scale(1.4) rotate(180deg);
+  filter: drop-shadow(0 0 18px rgba(255, 230, 163, 1)) drop-shadow(0 0 32px rgba(215, 171, 80, 0.7));
+}
+
+@keyframes sparkleEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes sparkleTwinklePulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 6px rgba(255, 230, 163, 0.7));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.22) rotate(45deg);
+    filter: drop-shadow(0 0 14px rgba(255, 230, 163, 0.95)) drop-shadow(0 0 24px rgba(215, 171, 80, 0.5));
+  }
+}
+
+/* Golden Jewel Accent Dot */
+.char-dot {
+  color: var(--gold-primary, #D7AB50);
+  text-shadow: 0 0 10px rgba(215, 171, 80, 0.55);
+  display: inline-block;
+}
+
+/* Architectural Horizon Hairline */
+.hero-title-horizon {
+  display: block;
+  height: 1px;
+  width: 0;
+  max-width: 240px;
+  margin-top: 18px;
+  margin-bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(215, 171, 80, 0.85) 0%,
+    rgba(215, 171, 80, 0.3) 65%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(215, 171, 80, 0.32);
+  animation: horizonUnfold 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.82s forwards;
+  position: relative;
+}
+
+.hero-title-horizon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #FFF3D6;
+  box-shadow: 0 0 6px #FFF3D6;
+}
+
+@keyframes horizonUnfold {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.hero-lead {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75);
+}
+
+.hero-animate-lead {
+  animation: heroLeadSlideIn 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.52s backwards;
+}
+
+@keyframes heroLeadSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate-actions {
+  animation: heroLeadSlideIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.68s backwards;
+}
+
+.hero-animate-media {
+  animation: heroScaleIn 2s var(--anim-ease-out) backwards;
+}
+
+/* Micro-Interactions */
+.hover-underline-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline-reveal::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.35s var(--anim-ease-out);
+}
+
+.hover-underline-reveal:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Image Parallax Container */
+.parallax-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* Subtle Shimmer for High-Priority Elements */
+@keyframes subtleShimmer {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.shimmer-badge {
+  animation: subtleShimmer 3s ease-in-out infinite;
+}
+
+/* Floating Gentle Float for Badges */
+@keyframes floatGentle {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-badge {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Luxury Scale In Reveal */
+.reveal-scale-in {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 1s var(--anim-ease-out), transform 1s var(--anim-ease-spring);
+  will-change: opacity, transform;
+}
+
+.reveal-scale-in.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Subtle Shimmer Sheen */
+.gold-sheen {
+  background: linear-gradient(120deg, var(--muted-gold) 0%, #FFFFFF 50%, var(--muted-gold) 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: sheenSlide 6s linear infinite;
+}
+
+@keyframes sheenSlide {
+  to { background-position: 200% center; }
+}
+
+/* ==========================================================================
+   CREATIVE LIGHT MOTION LINES & AMBIENT RAYS
+   ========================================================================== */
+
+/* 1. Traveling Light Motion Line for Section Dividers & Seams */
+.light-motion-line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-subtle) 20%, var(--border-subtle) 80%, transparent 100%);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.light-motion-line::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 140px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(215, 171, 80, 0.4) 20%, #FFF8E7 50%, #D7AB50 80%, transparent 100%);
+  box-shadow: 0 0 16px 2px rgba(215, 171, 80, 0.8), 0 0 6px 1px #FFF8E7;
+  border-radius: 999px;
+  animation: lightBeamTravel 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes lightBeamTravel {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px));
+    opacity: 0;
+  }
+}
+
+/* 2. Top Card Traveling Light Beam */
+.card-light-beam {
+  position: relative;
+}
+
+.card-light-beam::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(215, 171, 80, 0.25), transparent);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.card-light-beam::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFF8E7 40%, #D7AB50 70%, transparent 100%);
+  box-shadow: 0 0 12px 1px rgba(215, 171, 80, 0.7);
+  opacity: 0;
+  z-index: 6;
+  pointer-events: none;
+  animation: cardBeamGlide 5s ease-in-out infinite alternate;
+}
+
+@keyframes cardBeamGlide {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    left: calc(100% - 90px);
+    opacity: 0;
+  }
+}
+
+/* 3. Hero Canopy Morning Light Rays (Sunlight Filtering Through Canopy & Forest Dew) */
+.canopy-light-stream {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.canopy-ray {
+  position: absolute;
+  top: -60%;
+  width: 180px;
+  height: 220%;
+  background: linear-gradient(110deg, transparent 0%, rgba(215, 171, 80, 0.04) 40%, rgba(255, 248, 225, 0.12) 50%, rgba(215, 171, 80, 0.04) 60%, transparent 100%);
+  transform: rotate(-28deg);
+  filter: blur(18px);
+  will-change: transform, opacity;
+  animation: canopyRayBreathe 9s ease-in-out infinite alternate;
+}
+
+.canopy-ray-1 {
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.canopy-ray-2 {
+  left: 55%;
+  width: 240px;
+  animation-duration: 12s;
+  animation-delay: -4s;
+}
+
+.canopy-ray-3 {
+  left: 82%;
+  width: 140px;
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+
+@keyframes canopyRayBreathe {
+  0% {
+    opacity: 0.3;
+    transform: rotate(-28deg) translateY(-25px);
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(-26deg) translateY(15px);
+  }
+  100% {
+    opacity: 0.35;
+    transform: rotate(-29deg) translateY(-5px);
+  }
+}
+
+/* 4. Creative Text Gold Shimmer Effect */
+.gold-shimmer-text {
+  background: linear-gradient(90deg, #E2B961 0%, #FFF8E7 25%, #D7AB50 50%, #FFF8E7 75%, #E2B961 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: textGoldShine 6s linear infinite;
+  text-shadow: 0 0 24px rgba(215, 171, 80, 0.25);
+}
+
+@keyframes textGoldShine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* 5. Editorial Drop Cap */
+.editorial-dropcap {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.8rem;
+  line-height: 0.8;
+  padding-right: 14px;
+  padding-top: 6px;
+  color: var(--muted-gold);
+  font-weight: 500;
+  text-shadow: 0 2px 12px rgba(215, 171, 80, 0.3);
+}
+
+/* 6. Concentric Dewdrop Radar Pulse */
+.dewdrop-radar {
+  position: relative;
+  display: inline-block;
+}
+
+.dewdrop-radar::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--muted-gold);
+  animation: dewRadarWave 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes dewRadarWave {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* 7. Hero Headline Horizon Light Line */
+.hero-light-accent-beam {
+  position: relative;
+  width: min(100%, 360px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(215, 171, 80, 0.3) 15%, rgba(255, 248, 231, 0.6) 50%, rgba(215, 171, 80, 0.3) 85%, transparent 100%);
+  margin: 18px 0 24px;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.hero-light-accent-beam::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFF8E7 40%, #E5BE6C 70%, transparent 100%);
+  box-shadow: 0 0 16px 2px rgba(215, 171, 80, 0.95), 0 0 4px #FFF8E7;
+  border-radius: 999px;
+  animation: heroBeamGlide 4s ease-in-out infinite alternate;
+}
+
+@keyframes heroBeamGlide {
+  0% { left: 0%; opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { left: calc(100% - 90px); opacity: 0.3; }
+}
+
+/* 7b. Hero Horizon Light Line Centered Variant */
+.hero-light-accent-beam.is-centered {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, transparent 0%, rgba(215, 171, 80, 0.35) 20%, rgba(255, 248, 231, 0.75) 50%, rgba(215, 171, 80, 0.35) 80%, transparent 100%);
+}
+
+.hero-light-accent-beam.is-centered::after {
+  animation: heroBeamGlideCenter 4.2s ease-in-out infinite alternate;
+}
+
+@keyframes heroBeamGlideCenter {
+  0% { left: 0%; opacity: 0.25; }
+  50% { opacity: 1; }
+  100% { left: calc(100% - 90px); opacity: 0.25; }
+}
+
+/* 8. Editorial Section Title Horizon Light Line (Dynamic Luminous Accent) */
+.heading-light-line {
+  position: relative;
+  display: block;
+  width: 76px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--muted-gold) 0%, rgba(215, 171, 80, 0.4) 65%, transparent 100%);
+  box-shadow: 0 0 10px rgba(215, 171, 80, 0.5);
+  margin-top: 12px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.heading-light-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFF8E7 40%, #E5BE6C 80%, transparent 100%);
+  box-shadow: 0 0 12px 1px rgba(215, 171, 80, 0.95), 0 0 4px #FFF8E7;
+  border-radius: 999px;
+  animation: headingBeamGlide 3.6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes headingBeamGlide {
+  0% { left: 0%; opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { left: calc(100% - 26px); opacity: 0.2; }
+}
+
+/* Centered heading light line */
+.heading-light-line.is-centered {
+  margin-left: auto;
+  margin-right: auto;
+  width: 104px;
+  background: linear-gradient(90deg, transparent 0%, rgba(215, 171, 80, 0.55) 20%, rgba(255, 248, 231, 0.85) 50%, rgba(215, 171, 80, 0.55) 80%, transparent 100%);
+}
+
+.heading-light-line.is-centered::after {
+  animation: headingBeamGlideCenter 4s ease-in-out infinite alternate;
+}
+
+@keyframes headingBeamGlideCenter {
+  0% { left: 0%; opacity: 0.25; }
+  50% { opacity: 1; }
+  100% { left: calc(100% - 26px); opacity: 0.25; }
+}
+
+/* 9. Header Bottom Horizon Light Line on Scroll */
+.site-header {
+  position: relative;
+}
+
+.site-header.scrolled::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(215, 171, 80, 0.35) 25%, rgba(255, 248, 231, 0.75) 50%, rgba(215, 171, 80, 0.35) 75%, transparent 100%);
+  pointer-events: none;
+  z-index: 10;
+  animation: headerLightPulse 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes headerLightPulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.95; }
+  100% { opacity: 0.5; }
+}
+
+/* 10. CTA Strip Horizon Light Accent */
+.cta-banner-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(215, 171, 80, 0.4), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cta-banner-section::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFF8E7 40%, #D7AB50 70%, transparent 100%);
+  box-shadow: 0 0 16px 2px rgba(215, 171, 80, 0.85), 0 0 4px #FFF8E7;
+  opacity: 0.9;
+  animation: ctaBeamGlide 5.5s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes ctaBeamGlide {
+  0% { left: 0%; opacity: 0.2; }
+  50% { opacity: 0.95; }
+  100% { left: calc(100% - 140px); opacity: 0.2; }
+}
+
+/* 11. Interactive Card Light Beam Hover Reaction */
+.card-light-beam {
+  transition: border-color 0.4s var(--anim-ease-out), box-shadow 0.4s var(--anim-ease-out), transform 0.4s var(--anim-ease-out);
+}
+
+.card-light-beam:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 0 1px 1px rgba(215, 171, 80, 0.35);
+}
+
+.card-light-beam:hover::before {
+  background: linear-gradient(90deg, transparent, rgba(215, 171, 80, 0.55), transparent);
+}
+
+.card-light-beam:hover::after {
+  box-shadow: 0 0 18px 2px rgba(215, 171, 80, 0.95), 0 0 6px #FFF8E7;
+}
+
+/* 12. Interactive Button Luminescent Hover Edge */
+.btn-gold,
+.btn-graphite {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::after,
+.btn-graphite::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: none;
+}
+
+.btn-gold:hover::after,
+.btn-graphite:hover::after {
+  left: 150%;
+  transition: left 0.75s ease-in-out;
+}
+
+/* ==========================================================================
+   13. AUTHENTIC ROOM GALLERY SLIDER & CREATIVE MOTION
+   ========================================================================== */
+/* Creative Dual-Angle Hover Transition for Standard Room Cards */
+.room-card-img-wrap {
+  position: relative;
+  height: 380px;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.room-img-hover-secondary {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.room-card:hover .room-img-hover-secondary {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.room-card-horizontal .room-card-img-wrap.room-gallery-slider,
+.room-gallery-slider {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--natural-sand, #EAE5D9);
+}
+
+.room-gallery-slides {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  height: 100%;
+}
+
+.room-gallery-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.room-gallery-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.room-card:hover .room-gallery-slide.is-active {
+  transform: scale(1.04);
+}
+
+/* Subtle gradient scrim at bottom to ensure pills always stand out clearly */
+.room-gallery-slider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 96px;
+  background: linear-gradient(to top, rgba(12, 15, 14, 0.8) 0%, rgba(12, 15, 14, 0.25) 60%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Top Badge Lockup */
+.room-card-badges {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.room-card-tag-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.room-card-tag.room-tag-gold {
+  background: rgba(18, 21, 20, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(215, 171, 80, 0.55);
+  color: #FFF8E7;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.room-card-tag.room-tag-gold .sparkle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D7AB50;
+  box-shadow: 0 0 8px #D7AB50;
+  animation: goldPulse 2s infinite ease-in-out;
+}
+
+@keyframes goldPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.room-card-tag-sub {
+  background: rgba(18, 21, 20, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #E6E1D6;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* Zoom Lightbox Trigger Button */
+.room-zoom-btn {
+  pointer-events: auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(18, 21, 20, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFF8E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.room-zoom-btn:hover {
+  transform: scale(1.12);
+  background: #D7AB50;
+  color: #121514;
+  border-color: #D7AB50;
+  box-shadow: 0 6px 20px rgba(215, 171, 80, 0.45);
+}
+
+/* Bottom Multi-Angle View Switcher Controls */
+.room-slider-controls {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.room-view-tabs {
+  display: inline-flex;
+  gap: 5px;
+  background: rgba(14, 18, 16, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 4px 6px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.room-view-tab {
+  background: transparent;
+  border: none;
+  color: rgba(243, 240, 233, 0.78);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  font-family: inherit;
+}
+
+.room-view-tab:hover {
+  color: #FFF;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.room-view-tab.is-active {
+  background: linear-gradient(135deg, #D7AB50 0%, #B88E35 100%);
+  color: #121514;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(215, 171, 80, 0.35);
+}
+
+/* Arrow Navigation */
+.room-nav-arrows {
+  display: flex;
+  gap: 6px;
+}
+
+.room-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(14, 18, 16, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.room-arrow-btn:hover {
+  background: #D7AB50;
+  color: #121514;
+  border-color: #D7AB50;
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   14. CREATIVE SHOWCASE: THE ART OF REST AT FOREST DEW
+   ========================================================================== */
+.room-experience-showcase {
+  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: clamp(28px, 4vw, 56px);
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.room-experience-showcase::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(215, 171, 80, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.showcase-header-wrap {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+
+.showcase-tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.showcase-tab-trigger {
+  background: var(--bg-surface-alt, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border-light, rgba(255, 255, 255, 0.12));
+  color: var(--text-muted);
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.showcase-tab-trigger:hover {
+  color: var(--text-primary);
+  border-color: rgba(215, 171, 80, 0.45);
+  transform: translateY(-2px);
+}
+
+.showcase-tab-trigger.is-active {
+  background: linear-gradient(135deg, #D7AB50 0%, #B88E35 100%);
+  color: #121514;
+  border-color: #D7AB50;
+  box-shadow: 0 8px 24px rgba(215, 171, 80, 0.3);
+  transform: translateY(-2px);
+}
+
+.showcase-pane {
+  display: none;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(24px, 4vw, 50px);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.showcase-pane.is-active {
+  display: grid;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .showcase-pane {
+    grid-template-columns: 1fr;
+  }
+}
+
+.showcase-visual-col {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-card);
+}
+
+.showcase-visual-col img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-visual-col:hover img {
+  transform: scale(1.04);
+}
+
+/* Interactive Hotspot Pins on the showcase photo */
+.showcase-hotspot {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(18, 21, 20, 0.88);
+  border: 2px solid #D7AB50;
+  color: #FFF8E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 0.8rem;
+  box-shadow: 0 0 16px rgba(215, 171, 80, 0.65);
+  transition: transform 0.3s ease, background 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-hotspot::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(215, 171, 80, 0.6);
+  animation: hotspotRipples 2s infinite ease-out;
+}
+
+@keyframes hotspotRipples {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.showcase-hotspot:hover {
+  transform: translate(-50%, -50%) scale(1.18);
+  background: #D7AB50;
+  color: #121514;
+}
+
+.showcase-hotspot-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(18, 21, 20, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(215, 171, 80, 0.5);
+  color: #FFF8E7;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+}
+
+.showcase-hotspot:hover .showcase-hotspot-tooltip,
+.showcase-hotspot:focus .showcase-hotspot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.showcase-info-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showcase-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-gold);
+  margin-bottom: 12px;
+}
+
+.showcase-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.showcase-lead {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.showcase-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.showcase-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text-secondary, #D5D0C6);
+  line-height: 1.5;
+}
+
+.showcase-feature-item strong {
+  color: var(--text-primary);
+}
+
+.showcase-feature-bullet {
+  color: var(--muted-gold);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+@media (max-width: 600px) {
+  .room-slider-controls {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  .room-view-tab {
+    padding: 5px 9px;
+    font-size: 0.62rem;
+  }
+  .room-card-badges {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+  .showcase-visual-col img {
+    height: 290px;
+  }
+}
+
+/* Respect Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-fade-up,
+  .reveal-fade-in,
+  .reveal-clip-right,
+  .reveal-clip-up {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  
+  .hero-bg-media img {
+    transform: none !important;
+  }
+
+  .hero-title-word,
+  .hero-word,
+  .hero-kinetic-title .char,
+  .char-wild,
+  .hero-title-horizon,
+  .hero-text-aura,
+  .wild-sparkle,
+  .hero-animate-lead,
+  .hero-animate-actions {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .hero-title-horizon {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Forest Dew Udawalawa",
+  "short_name": "Forest Dew",
+  "description": "Nature-led stays and private Udawalawe safaris",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbf5ec",
+  "theme_color": "#fbf5ec",
+  "icons": [
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

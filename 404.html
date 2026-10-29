@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191D1C">
+  <title>Page Not Found | Forest Dew Udawalawa</title>
+  <meta name="description" content="The page you are looking for has wandered off the trail. Return to Forest Dew Udawalawa.">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('fd_theme');
+      if (t) { document.documentElement.setAttribute('data-theme', t); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    .error-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background-color: var(--graphite-deep);
+      color: var(--soft-chalk);
+      position: relative;
+    }
+    .error-emblem {
+      width: 72px;
+      height: 72px;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      padding: 8px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .error-title {
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 1;
+      margin-bottom: 20px;
+      color: var(--soft-chalk);
+    }
+    .error-desc {
+      font-size: 1.1rem;
+      color: var(--natural-sand);
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .error-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="error-wrapper">
+    <img src="assets/images/logo-mark.png" alt="Forest Dew Logo Emblem" class="error-emblem" width="72" height="72">
+    <span class="eyebrow eyebrow-dark" style="margin-bottom: 12px;">Error 404</span>
+    <h1 class="error-title">Off the <em>Trail.</em></h1>
+    <p class="error-desc">
+      The path you are looking for has wandered into the deep forest. Let us guide you back to the comfort of Forest Dew.
+    </p>
+    <div class="error-actions">
+      <a href="index.html" class="btn btn-gold">Return to Home ↗</a>
+      <a href="rooms.html" class="btn btn-outline-light">Explore Rooms ↗</a>
+      <a href="plan-stay.html" class="btn btn-outline-light">Plan Your Stay ↗</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1039 @@
+/* ==========================================================================
+   FOREST DEW UDAWALAWA — COMPREHENSIVE RESPONSIVE STYLES
+   Engineered for zero-overflow perfection across all mobile devices:
+   320px (SE), 360px, 375px/390px (iPhone), 412px/414px (Galaxy/Plus),
+   768px/820px (iPad/Tablet), 1024px (iPad Pro), 1280px - 1440px+ (Desktop)
+   ========================================================================== */
+
+/* Universal Mobile Viewport & Overflow Protection */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Accessible Close State for Mobile Drawer Toggle */
+.menu-toggle.is-active span {
+  background-color: #F3F0E9 !important;
+}
+
+/* ==========================================================================
+   LARGE DESKTOP (> 1440px)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  :root {
+    --site-width: 1400px;
+  }
+}
+
+/* ==========================================================================
+   LAPTOPS & STANDARD DESKTOPS (1024px - 1279px)
+   ========================================================================== */
+@media (max-width: 1279px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  
+  .booking-form-grid {
+    grid-template-columns: repeat(2, 1fr) repeat(2, 1fr);
+  }
+  
+  .booking-form-grid .booking-submit-btn {
+    grid-column: span 4;
+  }
+  
+  .safari-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .footer-top-grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   TABLETS & MEDIUM SCREENS (768px - 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .desktop-nav,
+  .header-actions .header-phone {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .hero-meta-items-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .hero-meta-divider {
+    display: none;
+  }
+  
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .story-badge-card {
+    position: static;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .intl-services-grid,
+  .intl-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .intl-topbar-container {
+    gap: 10px;
+  }
+
+  .intl-airport-guide {
+    display: none;
+  }
+  
+  .room-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .room-card-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .room-card-horizontal .room-card-img-wrap {
+    height: 320px;
+    min-height: 320px;
+  }
+  
+  .pool-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .pool-visual-frame img {
+    height: 440px;
+  }
+  
+  .safari-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .dining-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .dining-sub-img-card {
+    position: static;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    border: none;
+  }
+  
+  .gallery-mosaic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-mosaic-item.wide {
+    grid-column: span 1;
+  }
+  
+  .destination-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .destination-frame img {
+    height: 300px;
+    object-position: 85% center;
+  }
+  
+  .cta-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cta-banner-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .cta-banner-actions .btn {
+    width: 100%;
+  }
+  
+  .planner-builder-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .planner-summary-sticky {
+    position: static;
+    margin-top: 40px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .footer-brand-col {
+    grid-column: span 2;
+  }
+}
+
+/* ==========================================================================
+   MEDIUM TABLET TO PHONE INTERMEDIATE (768px - 900px)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .room-card-horizontal {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .room-card-horizontal .room-card-img-wrap {
+    height: 260px !important;
+    min-height: 260px !important;
+    width: 100% !important;
+  }
+
+  .meal-key-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .amenities-4col-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .about-pillars-box {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 20px;
+  }
+}
+
+/* ==========================================================================
+   SMARTPHONES & MOBILE BROWSERS (≤ 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Safe area padding for mobile navigation dock */
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+  
+  .mobile-sticky-dock {
+    display: block;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 12px));
+    z-index: 800;
+  }
+  
+  /* Hide luxury concierge floating pill on mobile to prevent obstruction of forms and buttons */
+  .luxury-concierge-pill {
+    display: none !important;
+  }
+  
+  /* Float WA Button comfortably above the mobile sticky reservation dock */
+  .floating-wa-btn {
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    right: 18px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+  
+  .site-header {
+    padding: 0;
+  }
+
+  .site-header .header-container {
+    padding: 12px 0;
+  }
+
+  .intl-topbar {
+    padding: 5px 0;
+    font-size: 0.65rem;
+  }
+
+  .intl-topbar-right .currency-selector {
+    display: none;
+  }
+
+  .intl-live-pill small {
+    display: none;
+  }
+
+  .intl-topbar-divider {
+    display: none;
+  }
+
+  .intl-trust-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .intl-trust-divider {
+    display: none;
+  }
+
+  .intl-services-grid,
+  .intl-reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .header-actions .header-cta {
+    display: none;
+  }
+  
+  /* Mobile Drawer Smooth Full Viewport */
+  .mobile-drawer {
+    padding: 85px 24px calc(24px + env(safe-area-inset-bottom, 20px));
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .mobile-drawer-link {
+    font-size: clamp(1.65rem, 6.5vw, 2.3rem);
+    padding-bottom: 10px;
+  }
+  
+  .mobile-drawer-footer {
+    margin-top: 20px;
+    padding-top: 18px;
+  }
+
+  /* ==========================================================================
+     CINEMATIC HERO: DEVICE-SIZED MOBILE ARCHITECTURE & CRYSTAL-CLEAR FRAMING
+     ========================================================================== */
+  .hero-cinematic {
+    min-height: 100svh;
+    min-height: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: calc(75px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); /* clears mobile sticky dock */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Scene-Specific Focal Alignments for Mobile Device Sizes */
+  .hero-slide[data-hero-slide="0"] img {
+    object-position: 46% 36% !important; /* Frames Udawalawe lake horizon + lush canopy retreat */
+  }
+
+  .hero-slide[data-hero-slide="1"] img {
+    object-position: 63% 36% !important; /* Frames two-storey boutique guest wing & balconies */
+  }
+
+  .hero-slide[data-hero-slide="2"] img {
+    object-position: 50% 50% !important; /* Frames sparkling freshwater swimming pool & garden loungers */
+  }
+
+  /* Crisper, more luminous imagery on mobile screens (eliminates dark/muddy tint) */
+  .hero-slide img {
+    filter: brightness(0.92) contrast(1.05) saturate(1.06) !important;
+  }
+
+  /* Subtly calibrated mobile zoom: stays razor sharp without pixel blur */
+  .hero-slide.is-active[data-hero-slide="0"] img,
+  .hero-slide.is-active[data-hero-slide="1"] img,
+  .hero-slide.is-active[data-hero-slide="2"] img {
+    animation: mobileCrispZoom 5s ease-out forwards !important;
+  }
+
+  @keyframes mobileCrispZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.025); }
+  }
+
+  /* Lighter mobile gradient overlay: upper 60% stays crystal clear for photos */
+  .hero-bg-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 21, 20, 0.45) 0%,
+      rgba(18, 21, 20, 0.12) 32%,
+      rgba(18, 21, 20, 0.52) 68%,
+      rgba(18, 21, 20, 0.90) 100%
+    ) !important;
+  }
+
+  .canopy-light-stream {
+    opacity: 0.28 !important;
+  }
+
+  .hero-content {
+    padding: 10px 0 8px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-content-col-main {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .hero-kicker {
+    padding: 6px 14px 6px 10px;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+    max-width: fit-content;
+  }
+
+  .hero-text-aura {
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 90%;
+    filter: blur(28px);
+    opacity: 0.85;
+  }
+
+  .hero-title,
+  .hero-kinetic-title {
+    font-size: clamp(2.1rem, 7.8vw, 2.6rem);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+
+  .hero-title-line {
+    padding-bottom: 0.12em;
+    margin-bottom: -0.04em;
+    white-space: nowrap;
+  }
+
+  .hero-word {
+    margin-right: 0.22em;
+  }
+
+  .hero-title-horizon {
+    max-width: 160px;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .wild-sparkle {
+    top: -0.08em;
+    right: -0.4em;
+    font-size: 0.38em;
+  }
+
+  .hero-lead {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    max-width: 96%;
+    color: rgba(243, 240, 233, 0.92);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 130px;
+    padding: 11px 16px;
+    font-size: 0.78rem;
+    justify-content: center;
+  }
+
+  .hero-actions .btn-text {
+    display: none;
+  }
+
+  /* Compact luxury glass card for atmosphere scene selector & property chips */
+  .hero-meta-panel {
+    padding: 10px 14px;
+    gap: 8px;
+    background: rgba(18, 21, 20, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(215, 171, 80, 0.22);
+    border-radius: var(--radius-sm);
+  }
+
+  .hero-meta-items-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(243, 240, 233, 0.1);
+  }
+
+  .hero-meta-item {
+    gap: 2px;
+  }
+
+  .hero-meta-label {
+    font-size: 0.54rem;
+    letter-spacing: 0.12em;
+    color: var(--natural-sand);
+  }
+
+  .hero-meta-value {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #F3F0E9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-meta-divider,
+  .hero-meta-main-divider {
+    display: none;
+  }
+
+  .hero-scene-nav {
+    margin-top: 0;
+  }
+
+  .hero-scene-header {
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .hero-scene-title {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-scene-caption-live {
+    font-size: 0.62rem;
+  }
+
+  .hero-clear-view-btn {
+    padding: 4px 9px;
+    font-size: 0.62rem;
+  }
+
+  .hero-scene-btns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .hero-scene-btn {
+    padding: 8px 4px;
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
+    border-radius: 6px;
+  }
+
+  .hero-scene-btn span {
+    font-size: 0.58rem;
+  }
+
+  .hero-scroll-indicator {
+    display: none; /* Hide scroll indicator on mobile to give visual breathing room to photography */
+  }
+
+  /* Clear View Mode on Mobile */
+  .hero-cinematic.is-clear-view .hero-content-col-main {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px);
+  }
+
+  .hero-cinematic.is-clear-view .hero-meta-items-group {
+    display: none;
+  }
+
+  .hero-cinematic.is-clear-view .hero-meta-panel {
+    background: rgba(18, 21, 20, 0.45);
+    border-color: rgba(215, 171, 80, 0.4);
+  }
+
+  /* Section 03.5 Sanctuary Ground Cards Mobile Adjustments */
+  .sanctuary-aerial-card .sanctuary-img-wrap {
+    height: clamp(240px, 58vw, 320px);
+  }
+  .sanctuary-aerial-card .sanctuary-img-wrap img {
+    object-position: 48% 38% !important;
+  }
+
+  .sanctuary-facade-card .sanctuary-img-wrap {
+    height: clamp(240px, 58vw, 320px);
+  }
+  .sanctuary-facade-card .sanctuary-img-wrap img {
+    object-position: 63% 38% !important;
+  }
+  
+  .booking-bar-wrapper {
+    margin-top: 0;
+  }
+  
+  .booking-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-form-grid .booking-submit-btn {
+    grid-column: span 1;
+    width: 100%;
+  }
+  
+  .section-header-editorial {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .section-header-col-right {
+    align-items: flex-start;
+  }
+  
+  /* Stacked Room Cards */
+  .room-card-horizontal {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .room-card-img-wrap,
+  .room-card-horizontal .room-card-img-wrap {
+    height: 240px !important;
+    min-height: 240px !important;
+    width: 100% !important;
+  }
+  
+  .room-card-body {
+    padding: 22px 18px;
+  }
+
+  .room-card-rate-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .room-card-actions {
+    width: 100%;
+  }
+  
+  .room-card-actions .btn {
+    width: 100%;
+  }
+
+  .room-features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+  
+  /* Safari Presentation on Mobile */
+  .safari-hero-banner {
+    height: 320px;
+  }
+  
+  .safari-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .party-btn-group {
+    width: 100%;
+  }
+  
+  .party-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 14px;
+  }
+  
+  .safari-radio-group {
+    grid-template-columns: 1fr;
+  }
+
+  .safari-card {
+    padding: 26px 20px;
+  }
+
+  .safari-featured-badge {
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Gallery Horizontal Swipe Toolbar */
+  .gallery-filter-toolbar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 4px 16px 12px 16px !important;
+    margin-left: -16px;
+    margin-right: -16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .gallery-filter-toolbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .gallery-filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.7rem;
+  }
+
+  .gallery-mosaic-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .gallery-mosaic-item {
+    height: 260px;
+  }
+  
+  .gallery-mosaic-item.wide {
+    grid-column: span 1;
+  }
+  
+  .destination-frame img {
+    height: 240px;
+  }
+
+  .destination-stats-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Footer Mobile */
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  
+  .footer-brand-col {
+    grid-column: span 1;
+  }
+  
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  /* Smooth Touch-Scrollable Room Rates Matrix with Sticky Room Column */
+  .rate-matrix-card {
+    padding: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-sm);
+  }
+  
+  .rate-table {
+    min-width: 500px;
+  }
+  
+  .rate-table th,
+  .rate-table td {
+    padding: 12px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .rate-table td strong {
+    font-size: 0.98rem;
+  }
+
+  .rate-table th:first-child,
+  .rate-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--bg-surface);
+    z-index: 2;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .rate-table thead th:first-child {
+    background-color: var(--bg-surface-alt);
+    z-index: 3;
+  }
+
+  .meal-key-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* ==========================================================================
+   FORM & INTERACTIVE ESTIMATOR STACKING (≤ 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .form-grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .planner-step-card [style*="grid-template-columns: repeat(2, 1fr)"],
+  .contact-form-panel [style*="grid-template-columns: repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .calc-output-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .calc-output-display .btn {
+    width: 100%;
+  }
+
+  /* Hero Atmosphere 3-Image Button Bar */
+  .hero-scene-nav {
+    margin-top: 14px;
+  }
+
+  .hero-scene-btns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .hero-scene-btn {
+    padding: 8px 4px;
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+  }
+  
+  .hero-scene-btn span {
+    font-size: 0.58rem;
+  }
+}
+
+/* ==========================================================================
+   SMARTPHONES (≤ 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .display-1 {
+    font-size: 2.35rem;
+    line-height: 1.15;
+  }
+  
+  .display-2 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+  
+  .display-3 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .page-hero-title {
+    font-size: 2.35rem;
+    line-height: 1.15;
+  }
+  
+  .hero-title,
+  .hero-kinetic-title {
+    font-size: clamp(1.95rem, 8vw, 2.35rem);
+    line-height: 1.06;
+    margin-bottom: 12px;
+  }
+
+  .hero-word {
+    margin-right: 0.2em;
+  }
+
+  .hero-title-horizon {
+    max-width: 130px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .hero-lead,
+  .page-hero-lead {
+    font-size: 0.86rem;
+    line-height: 1.48;
+  }
+  
+  .hero-actions {
+    gap: 8px;
+  }
+  
+  .hero-actions .btn {
+    padding: 10px 12px;
+    font-size: 0.74rem;
+  }
+  
+  .hero-meta-panel {
+    padding: 10px 12px;
+  }
+  
+  .booking-bar {
+    padding: 16px 14px;
+  }
+
+  .intl-trust-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .intl-trust-strip {
+    padding: 14px 0;
+  }
+
+  .room-features-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .meal-key-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .amenities-4col-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .room-card-horizontal .room-card-img-wrap {
+    height: 210px !important;
+    min-height: 210px !important;
+  }
+  
+  .meal-plan-pills {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-pillars {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .lightbox-modal {
+    padding: 14px;
+  }
+
+  .lightbox-nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+  
+  .lightbox-prev {
+    left: 8px;
+  }
+  
+  .lightbox-next {
+    right: 8px;
+  }
+}
+
+/* ==========================================================================
+   EXTRA-COMPACT SMARTPHONES (≤ 360px)
+   e.g. iPhone SE 1st/2nd Gen, Galaxy A-series mini
+   ========================================================================== */
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 22px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-title,
+  .hero-kinetic-title {
+    font-size: 1.82rem;
+    line-height: 1.08;
+    margin-bottom: 10px;
+  }
+
+  .hero-word {
+    margin-right: 0.18em;
+  }
+
+  .hero-title-horizon {
+    max-width: 110px;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .display-1 {
+    font-size: 2rem;
+  }
+
+  .display-2 {
+    font-size: 1.65rem;
+  }
+
+  .display-3 {
+    font-size: 1.35rem;
+  }
+
+  .page-hero-title {
+    font-size: 2rem;
+  }
+
+  .room-plan-pills-row {
+    gap: 3px;
+    padding: 3px;
+  }
+
+  .room-plan-pill {
+    padding: 6px 3px;
+    font-size: 0.68rem;
+  }
+
+  .hero-scene-btns {
+    gap: 4px;
+  }
+
+  .hero-scene-btn {
+    font-size: 0.58rem;
+    padding: 6px 2px;
+  }
+
+  .mobile-dock-grid {
+    gap: 8px;
+  }
+
+  .mobile-dock-grid .btn {
+    padding: 12px 6px;
+    font-size: 0.72rem;
+  }
+
+  .rate-matrix-card {
+    padding: 10px 8px;
+  }
+}

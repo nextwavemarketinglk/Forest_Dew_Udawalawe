@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191D1C">
+  <title>Plan Your Stay &amp; Safari Itinerary | Forest Dew Udawalawa</title>
+  <meta name="description" content="Build your custom stay and safari itinerary at Forest Dew Udawalawa. Calculate room and meal-plan estimates in LKR and private safari packages in USD.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forest Dew Udawalawa">
+  <meta property="og:title" content="Plan Your Stay &amp; Safari Itinerary | Forest Dew Udawalawa">
+  <meta property="og:description" content="Interactive stay and safari itinerary planner for Forest Dew Udawalawa, Sri Lanka. Direct WhatsApp enquiry with no online booking fees.">
+  <meta property="og:image" content="assets/images/hero-forest-elephants.webp">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('fd_theme');
+      if (t) { document.documentElement.setAttribute('data-theme', t); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/booking.js"></script>
+</head>
+<body data-page="planner">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header header-dark" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand" aria-label="Forest Dew Udawalawa — Return to homepage">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/logo-mark.png" alt="Forest Dew Emblem" class="brand-emblem" width="40" height="40">
+        </div>
+        <div class="brand-words">
+          <span class="brand-name">Forest Dew</span>
+          <span class="brand-sub">Udawalawa</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" data-link="home">Home</a>
+        <a href="rooms.html" class="nav-link" data-link="rooms">Rooms &amp; Rates</a>
+        <a href="safari.html" class="nav-link" data-link="safari">Safari</a>
+        <a href="experiences.html" class="nav-link" data-link="experiences">Experiences</a>
+        <a href="gallery.html" class="nav-link" data-link="gallery">Gallery</a>
+        <a href="about.html" class="nav-link" data-link="about">About</a>
+        <a href="contact.html" class="nav-link" data-link="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+94766386132" class="header-phone" aria-label="Call Forest Dew Reception">
+          <span>+94 76 638 6132</span>
+        </a>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="plan-stay.html" class="header-cta">
+          Plan Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span class="eyebrow eyebrow-dark" style="margin: 0;">Boutique Safari Stay · Udawalawe</span>
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation Menu">
+        <a href="index.html" class="mobile-drawer-link" data-link="home">Home <span>01</span></a>
+        <a href="rooms.html" class="mobile-drawer-link" data-link="rooms">Rooms &amp; Rates <span>02</span></a>
+        <a href="safari.html" class="mobile-drawer-link" data-link="safari">Safari Adventures <span>03</span></a>
+        <a href="experiences.html" class="mobile-drawer-link" data-link="experiences">Hotel Experiences <span>04</span></a>
+        <a href="gallery.html" class="mobile-drawer-link" data-link="gallery">Photo Journal <span>05</span></a>
+        <a href="plan-stay.html" class="mobile-drawer-link active" data-link="planner">Plan Your Stay <span>06</span></a>
+        <a href="about.html" class="mobile-drawer-link" data-link="about">About Forest Dew <span>07</span></a>
+        <a href="contact.html" class="mobile-drawer-link" data-link="contact">Contact &amp; Location <span>08</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="tel:+94766386132" class="mobile-drawer-phone">+94 76 638 6132 ↗</a>
+      <p class="mobile-drawer-address">484/1 C.P. De Silva Road, Udawalawa, 70190, Sri Lanka</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Planner Hero -->
+    <section class="page-hero-editorial" aria-label="Planner Hero">
+      <div class="page-hero-bg">
+        <img src="assets/images/hero-forest-elephants.webp" alt="Elephant wilderness scene at dusk" fetchpriority="high">
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow eyebrow-dark">Boutique Itinerary Planner</span>
+        <div class="hero-light-accent-beam" aria-hidden="true"></div>
+        <h1 class="page-hero-title">
+          Curate Your<br><em class="gold-shimmer-text">Wild Escape.</em>
+        </h1>
+        <p class="page-hero-lead">
+          Configure your stay dates, preferred room category, meal arrangements, and an optional private Udawalawe safari. Generate a formatted enquiry directly to Forest Dew on WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <!-- Traveling Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- Step by Step Planner Builder -->
+    <section class="section-pad" id="builder" aria-label="Journey Builder">
+      <div class="container">
+        <div class="planner-builder-grid">
+          <!-- Left Column: Form Steps -->
+          <div class="planner-form-panel">
+            <form id="comprehensive-trip-planner" novalidate>
+              <!-- STEP 1: Dates & Accommodation -->
+              <div class="planner-step-card reveal-fade-up">
+                <div class="step-card-header">
+                  <span class="step-num">01</span>
+                  <div>
+                    <span class="eyebrow" style="margin: 0;">Stay Logistics</span>
+                    <h2 class="step-title">Dates &amp; Room Category</h2>
+                  </div>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="form-field">
+                    <label class="form-label" for="planner-checkin">Check-in Date *</label>
+                    <input type="date" id="planner-checkin" name="checkin" class="form-input" required>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="planner-checkout">Check-out Date *</label>
+                    <input type="date" id="planner-checkout" name="checkout" class="form-input" required>
+                  </div>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="form-field">
+                    <label class="form-label" for="planner-room">Room Category</label>
+                    <select id="planner-room" name="room" class="form-select">
+                      <option value="single">Single Room (from LKR 6,000)</option>
+                      <option value="double" selected>Double Room (from LKR 10,000)</option>
+                      <option value="triple">Triple Room (from LKR 17,000)</option>
+                      <option value="family">Family Room (from LKR 20,000)</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="planner-plan">Meal Plan</label>
+                    <select id="planner-plan" name="plan" class="form-select">
+                      <option value="ro">Room Only (R/O)</option>
+                      <option value="bb" selected>Bed &amp; Breakfast (B/B)</option>
+                      <option value="hb">Half Board (H/B)</option>
+                      <option value="fb">Full Board (F/B)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2: Optional Safari Adventure -->
+              <div class="planner-step-card reveal-fade-up" style="margin-top: 30px;">
+                <div class="step-card-header">
+                  <span class="step-num">02</span>
+                  <div>
+                    <span class="eyebrow" style="margin: 0;">National Park Expedition</span>
+                    <h2 class="step-title">Add an Optional Safari</h2>
+                  </div>
+                </div>
+
+                <div class="safari-radio-group">
+                  <label class="safari-radio-card">
+                    <input type="radio" name="safari" value="none" checked>
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; margin-bottom: 2px;">No Safari Needed</strong>
+                      <span style="font-size: 0.78rem; color: var(--text-muted);">Just peaceful accommodation &amp; pool stay</span>
+                    </div>
+                  </label>
+                  <label class="safari-radio-card">
+                    <input type="radio" name="safari" value="short">
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; margin-bottom: 2px;">4-Hour Safari</strong>
+                      <span style="font-size: 0.78rem; color: var(--text-muted);">From USD 125 · Jeep, tickets, water &amp; binoculars</span>
+                    </div>
+                  </label>
+                  <label class="safari-radio-card">
+                    <input type="radio" name="safari" value="half">
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; margin-bottom: 2px;">Half-Day Safari</strong>
+                      <span style="font-size: 0.78rem; color: var(--text-muted);">From USD 160 · Includes packed breakfast</span>
+                    </div>
+                  </label>
+                  <label class="safari-radio-card">
+                    <input type="radio" name="safari" value="full">
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; margin-bottom: 2px;">Full-Day Safari</strong>
+                      <span style="font-size: 0.78rem; color: var(--text-muted);">From USD 180 · Includes breakfast &amp; lunch</span>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Conditional Safari Fields -->
+                <div id="safari-custom-fields" style="display: none; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-light);">
+                  <div class="form-grid-2col">
+                    <div class="form-field">
+                      <label class="form-label" for="planner-party">Safari Group Size</label>
+                      <select id="planner-party" name="party" class="form-select">
+                        <option value="2" selected>2 Persons</option>
+                        <option value="4">4 Persons</option>
+                      </select>
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" for="planner-safaridate">Preferred Safari Date (Optional)</label>
+                      <input type="date" id="planner-safaridate" name="safaridate" class="form-input">
+                    </div>
+                  </div>
+                  <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 8px;">
+                    *Official safari packages are priced for 2 or 4 guests. For custom group sizes, enquire directly.
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 3: Guest Contact & Notes -->
+              <div class="planner-step-card reveal-fade-up" style="margin-top: 30px;">
+                <div class="step-card-header">
+                  <span class="step-num">03</span>
+                  <div>
+                    <span class="eyebrow" style="margin: 0;">Guest Information</span>
+                    <h2 class="step-title">Enquiry Details</h2>
+                  </div>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="form-field">
+                    <label class="form-label" for="planner-guestname">Your Full Name *</label>
+                    <input type="text" id="planner-guestname" name="guestname" class="form-input" placeholder="e.g. Eleanor Vance" required>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="planner-email">Email Address (Optional)</label>
+                    <input type="email" id="planner-email" name="email" class="form-input" placeholder="e.g. eleanor@example.com">
+                  </div>
+                </div>
+
+                <div class="form-field" style="margin-bottom: 24px;">
+                  <label class="form-label" for="planner-notes">Special Requests / Notes</label>
+                  <textarea id="planner-notes" name="notes" rows="4" class="form-input" style="height: auto; padding: 14px;" placeholder="Estimated arrival time, dietary preferences, extra questions..."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                  <button type="submit" class="btn btn-graphite" style="padding: 16px 36px;">
+                    Send Enquiry via WhatsApp <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+                  </button>
+                  <button type="button" id="share-plan-btn" class="btn btn-outline" style="padding: 16px 24px;">
+                    Copy Shareable Link ⧉
+                  </button>
+                </div>
+                <p id="planner-feedback-msg" style="font-size: 0.85rem; color: var(--graphite); margin-top: 14px; font-weight: 500;" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Sticky Summary Panel -->
+          <aside class="planner-summary-sticky card-light-beam" aria-label="Trip Summary">
+            <div class="summary-header">
+              <span class="eyebrow eyebrow-dark" style="margin-bottom: 6px;">Live Breakdown</span>
+              <h3>Your Stay at a Glance</h3>
+              <p>Indicative Estimate</p>
+            </div>
+
+            <div class="summary-body">
+              <div class="summary-line-item">
+                <span>Room Category</span>
+                <strong id="sum-room-name">Double Room</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Meal Plan</span>
+                <strong id="sum-plan-name">Bed &amp; Breakfast</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Duration</span>
+                <strong id="sum-nights-count">Dates required</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Selected Dates</span>
+                <strong id="sum-dates-display" style="font-size: 0.82rem; text-align: right;">Select check-in &amp; check-out</strong>
+              </div>
+              <div class="summary-line-item" style="border-bottom: 2px solid var(--border-sand); padding-bottom: 18px;">
+                <span>Accommodation Total</span>
+                <strong id="sum-stay-cost" style="font-family: var(--font-display); font-size: 1.4rem; color: var(--graphite);">—</strong>
+              </div>
+
+              <!-- Safari Addition -->
+              <div class="summary-line-item">
+                <span>Safari Package</span>
+                <strong id="sum-safari-name">None selected</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Safari Party</span>
+                <strong id="sum-safari-party">Optional addition</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Safari Cost</span>
+                <strong id="sum-safari-cost" style="font-family: var(--font-display); font-size: 1.4rem; color: var(--muted-gold);">—</strong>
+              </div>
+
+              <div class="summary-currency-note">
+                <strong style="color: var(--graphite); display: block; margin-bottom: 4px;">Important Note on Currencies:</strong>
+                Accommodation is quoted in Sri Lankan Rupees (LKR) and safari packages in US Dollars (USD). They are never combined into a single converted total. All estimates are subject to hotel confirmation.
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Traveling Light Motion Line Divider -->
+  <div class="light-motion-line" aria-hidden="true"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand-lockup">
+            <img src="assets/images/logo-mark.png" alt="Forest Dew Logo" class="footer-brand-logo" width="48" height="48">
+            <div class="brand-words">
+              <span class="brand-name" style="color: var(--soft-chalk);">Forest Dew</span>
+              <span class="brand-sub">Udawalawa</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A contemporary boutique safari hotel located near Udawalawe National Park, Sri Lanka. Offering comfortable accommodation, pool, dining, and private guided safari game drives.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+            <li><a href="room-details.html">Accommodation Details</a></li>
+            <li><a href="safari.html">Safari Packages</a></li>
+            <li><a href="experiences.html">Hotel Experiences</a></li>
+            <li><a href="gallery.html">Photo Journal</a></li>
+            <li><a href="about.html">About Forest Dew</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Enquiries</h4>
+          <ul class="footer-nav-list">
+            <li><a href="plan-stay.html">Build Your Itinerary</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="https://wa.me/94766386132" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><a href="privacy.html">Privacy &amp; Photo Credits</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Location</h4>
+          <div class="footer-contact-details">
+            <address style="font-style: normal;">
+              Forest Dew Udawalawa<br>
+              484/1 C.P. De Silva Road<br>
+              Udawalawa, 70190, Sri Lanka
+            </address>
+            <p>Telephone: <a href="tel:+94766386132">+94 76 638 6132</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark" aria-hidden="true">FOREST DEW</div>
+      <div class="footer-bottom-bar">
+        <span>&copy; <span data-current-year>2026</span> Forest Dew Udawalawa. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#credits">Image Credits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- International Luxury Floating Concierge (WhatsApp) -->
+  <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%20Udawalawa%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." class="luxury-concierge-pill" aria-label="Direct WhatsApp Concierge" target="_blank" rel="noopener noreferrer">
+    <div class="concierge-avatar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L4 20.5l1.3-4.1a8.5 8.5 0 1 1 15.2-4.6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 9c-.3.4-.8 1.4-.4 2.2.7 1.8 3.2 4.2 5 4.7.8.2 1.5-.4 1.9-.9l-1.6-1.2-1.1.7c-1.2-.6-2.1-1.6-2.7-2.8l.8-1L9.5 9Z" fill="currentColor"/>
+      </svg>
+      <span class="concierge-pulse" aria-hidden="true"></span>
+    </div>
+    <div class="concierge-text">
+      <span class="concierge-title">Hotel Concierge</span>
+      <span class="concierge-status">Online · Udawalawe</span>
+    </div>
+  </a>
+  <div class="mobile-sticky-dock" aria-label="Mobile reservation actions">
+    <div class="mobile-dock-grid">
+      <a href="plan-stay.html" class="btn btn-gold" style="padding: 12px; font-size: 0.72rem;">Plan Stay ↗</a>
+      <a href="https://wa.me/94766386132" class="btn btn-outline-light" style="padding: 12px; font-size: 0.72rem;" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+    </div>
+  </div>
+</body>
+</html>

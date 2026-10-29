@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191D1C">
+  <title>Accommodation Experience &amp; Room Details | Forest Dew Udawalawa</title>
+  <meta name="description" content="Explore the accommodation experience at Forest Dew Udawalawa. Architectural details, forest garden views, natural light, and comfort amenities.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forest Dew Udawalawa">
+  <meta property="og:title" content="Accommodation Experience &amp; Room Details | Forest Dew Udawalawa">
+  <meta property="og:description" content="Immerse in the peaceful guest rooms at Forest Dew. Unhurried stays surrounded by Sri Lankan nature and forest light.">
+  <meta property="og:image" content="assets/images/room-double-romantic.jpg">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('fd_theme');
+      if (t) { document.documentElement.setAttribute('data-theme', t); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+</head>
+<body data-page="rooms">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header header-dark" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand" aria-label="Forest Dew Udawalawa — Return to homepage">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/logo-mark.png" alt="Forest Dew Emblem" class="brand-emblem" width="40" height="40">
+        </div>
+        <div class="brand-words">
+          <span class="brand-name">Forest Dew</span>
+          <span class="brand-sub">Udawalawa</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" data-link="home">Home</a>
+        <a href="rooms.html" class="nav-link active" data-link="rooms" aria-current="page">Rooms &amp; Rates</a>
+        <a href="safari.html" class="nav-link" data-link="safari">Safari</a>
+        <a href="experiences.html" class="nav-link" data-link="experiences">Experiences</a>
+        <a href="gallery.html" class="nav-link" data-link="gallery">Gallery</a>
+        <a href="about.html" class="nav-link" data-link="about">About</a>
+        <a href="contact.html" class="nav-link" data-link="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+94766386132" class="header-phone" aria-label="Call Forest Dew Reception">
+          <span>+94 76 638 6132</span>
+        </a>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="plan-stay.html" class="header-cta">
+          Plan Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span class="eyebrow eyebrow-dark" style="margin: 0;">Boutique Safari Stay · Udawalawe</span>
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation Menu">
+        <a href="index.html" class="mobile-drawer-link" data-link="home">Home <span>01</span></a>
+        <a href="rooms.html" class="mobile-drawer-link active" data-link="rooms">Rooms &amp; Rates <span>02</span></a>
+        <a href="safari.html" class="mobile-drawer-link" data-link="safari">Safari Adventures <span>03</span></a>
+        <a href="experiences.html" class="mobile-drawer-link" data-link="experiences">Hotel Experiences <span>04</span></a>
+        <a href="gallery.html" class="mobile-drawer-link" data-link="gallery">Photo Journal <span>05</span></a>
+        <a href="plan-stay.html" class="mobile-drawer-link" data-link="planner">Plan Your Stay <span>06</span></a>
+        <a href="about.html" class="mobile-drawer-link" data-link="about">About Forest Dew <span>07</span></a>
+        <a href="contact.html" class="mobile-drawer-link" data-link="contact">Contact &amp; Location <span>08</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="tel:+94766386132" class="mobile-drawer-phone">+94 76 638 6132 ↗</a>
+      <p class="mobile-drawer-address">484/1 C.P. De Silva Road, Udawalawa, 70190, Sri Lanka</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero-editorial" aria-label="Room Details Hero">
+      <div class="page-hero-bg">
+        <img src="assets/images/hotel-exterior-facade.jpg" alt="Two-storey boutique white guest wing with glass balconies and garden terraces" fetchpriority="high">
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow eyebrow-dark">The Living Space</span>
+        <div class="hero-light-accent-beam" aria-hidden="true"></div>
+        <h1 class="page-hero-title">
+          Architectural Calm &amp;<br><em class="gold-shimmer-text">Forest Breezes.</em>
+        </h1>
+        <p class="page-hero-lead">
+          An inside look at our spaces, private verandas, natural ventilation, and honest hospitality in the heart of Udawalawe.
+        </p>
+      </div>
+    </section>
+
+    <!-- Traveling Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- Deep Dive Editorial Section -->
+    <section class="section-pad">
+      <div class="container">
+        <!-- Split Story 01: Light & Space -->
+        <div class="story-grid" style="margin-bottom: 100px;">
+          <div class="story-copy-panel reveal-fade-up">
+            <span class="eyebrow">Natural Light &amp; Space</span>
+            <h2 class="display-2">Designed for <em>Restoration.</em></h2>
+            <p class="lead-text">
+              Every room at Forest Dew is created to offer a tranquil counterpoint to the energetic heat and dusty excitement of the national park.
+            </p>
+            <p>
+              Wide glass doors open onto private balconies and shaded garden verandas, welcoming soft morning sun and green foliage views, while generous ceiling heights ensure continuous airflow through tropical days.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 24px 0; font-size: 0.9rem; color: var(--text-muted);">
+              <li style="display: flex; gap: 10px; align-items: center;"><strong style="color: var(--muted-gold);">✦</strong> Warm terracotta feature wall with ambient evening sconces</li>
+              <li style="display: flex; gap: 10px; align-items: center;"><strong style="color: var(--muted-gold);">✦</strong> Dedicated in-room tea kettle, mineral water &amp; work vanity</li>
+              <li style="display: flex; gap: 10px; align-items: center;"><strong style="color: var(--muted-gold);">✦</strong> Clean tiled floors cool underfoot after hours on safari</li>
+              <li style="display: flex; gap: 10px; align-items: center;"><strong style="color: var(--muted-gold);">✦</strong> Private en-suite bathroom with fresh water amenities</li>
+            </ul>
+          </div>
+          <div class="story-visuals reveal-clip-right">
+            <div class="room-gallery-slider" data-room-slider style="border-radius: var(--radius-sm); height: 500px;">
+              <div class="room-gallery-slides">
+                <img src="assets/images/room-single-terracotta-full.jpg" alt="Single Room Suite at Forest Dew with terracotta feature wall and king bed" class="room-gallery-slide is-active" loading="lazy">
+                <img src="assets/images/room-single-desk-view.jpg" alt="Single Room vanity desk with electric kettle and tea set" class="room-gallery-slide" loading="lazy">
+              </div>
+              <div class="room-card-badges">
+                <div class="room-card-tag-group">
+                  <span class="room-card-tag room-tag-gold"><span class="sparkle-dot"></span>Real Hotel Photo</span>
+                  <span class="room-card-tag-sub">Terracotta Suite</span>
+                </div>
+                <button type="button" class="room-zoom-btn" aria-label="Enlarge room photo" data-zoom-img="assets/images/room-single-terracotta-full.jpg" data-zoom-caption="Single Room Suite at Forest Dew — Terracotta architectural feature wall and king bed">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+              <div class="room-slider-controls">
+                <div class="room-view-tabs" role="tablist" aria-label="Suite perspectives">
+                  <button type="button" class="room-view-tab is-active" aria-pressed="true">🛏 Full Suite</button>
+                  <button type="button" class="room-view-tab" aria-pressed="false">☕ Tea Desk</button>
+                </div>
+                <div class="room-nav-arrows">
+                  <button type="button" class="room-arrow-btn room-arrow-prev" aria-label="Previous image">‹</button>
+                  <button type="button" class="room-arrow-btn room-arrow-next" aria-label="Next image">›</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Split Story 02: Furnishings & Atmosphere -->
+        <div class="story-grid" style="margin-bottom: 100px;">
+          <div class="story-visuals reveal-clip-right" style="order: 2;">
+            <div class="room-gallery-slider" data-room-slider style="border-radius: var(--radius-sm); height: 500px;">
+              <div class="room-gallery-slides">
+                <img src="assets/images/room-double-romantic.jpg" alt="Romantic Double Room with folded swan origami and flower petals" class="room-gallery-slide is-active" loading="lazy">
+                <img src="assets/images/room-single-terracotta-full.jpg" alt="Spacious room interior angle" class="room-gallery-slide" loading="lazy">
+              </div>
+              <div class="room-card-badges">
+                <div class="room-card-tag-group">
+                  <span class="room-card-tag room-tag-gold"><span class="sparkle-dot"></span>Real Hotel Photo</span>
+                  <span class="room-card-tag-sub">Honeymoon Decor</span>
+                </div>
+                <button type="button" class="room-zoom-btn" aria-label="Enlarge romantic double room photo" data-zoom-img="assets/images/room-double-romantic.jpg" data-zoom-caption="Double Room at Forest Dew — Bespoke swan towel origami and tropical flower petals">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+              <div class="room-slider-controls">
+                <div class="room-view-tabs" role="tablist" aria-label="Double room styling">
+                  <button type="button" class="room-view-tab is-active" aria-pressed="true">🦢 Romantic Swans</button>
+                  <button type="button" class="room-view-tab" aria-pressed="false">🛏 Suite Angle</button>
+                </div>
+                <div class="room-nav-arrows">
+                  <button type="button" class="room-arrow-btn room-arrow-prev" aria-label="Previous image">‹</button>
+                  <button type="button" class="room-arrow-btn room-arrow-next" aria-label="Next image">›</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="story-copy-panel reveal-fade-up" style="order: 1;">
+            <span class="eyebrow">Comfort &amp; Thoughtful Amenities</span>
+            <h2 class="display-2">Unhurried <em>Romance &amp; Simplicity.</em></h2>
+            <p class="lead-text">
+              We focus on what truly matters to travelers: pristine bedding, genuine warmth, and easy access to nature.
+            </p>
+            <p>
+              For couples celebrating honeymoons and anniversaries, our team crafts bespoke swan towel origami sprinkled with fresh botanical petals. Dedicated reading sconces and garden silence allow for deep unbroken nighttime rest.
+            </p>
+            <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="rooms.html" class="btn btn-graphite">View Room Rates ↗</a>
+              <a href="plan-stay.html" class="btn btn-outline">Build Stay Plan ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Amenities Grid -->
+        <div style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: clamp(30px, 5vw, 60px);" class="reveal-fade-up">
+          <div style="max-width: 600px; margin-bottom: 40px;">
+            <span class="eyebrow">Verified Property Amenities</span>
+            <h2 class="display-3">What You Can <em>Expect.</em></h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Based on verified property operations and authentic hotel facilities in Udawalawe.
+            </p>
+          </div>
+
+          <div class="amenities-4col-grid">
+            <div>
+              <span style="font-size: 1.5rem; color: var(--muted-gold); display: block; margin-bottom: 10px;">≋</span>
+              <strong style="display: block; font-size: 0.95rem; margin-bottom: 6px;">Swimming Pool</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Freshwater outdoor swimming pool for refreshing relaxation.</p>
+            </div>
+            <div>
+              <span style="font-size: 1.5rem; color: var(--muted-gold); display: block; margin-bottom: 10px;">🍽</span>
+              <strong style="display: block; font-size: 0.95rem; margin-bottom: 6px;">On-Site Dining</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Restaurant space serving breakfast, lunch, and evening dinners.</p>
+            </div>
+            <div>
+              <span style="font-size: 1.5rem; color: var(--muted-gold); display: block; margin-bottom: 10px;">🌿</span>
+              <strong style="display: block; font-size: 0.95rem; margin-bottom: 6px;">Garden Terrace</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Open-air terrace overlooking lush tropical greenery.</p>
+            </div>
+            <div>
+              <span style="font-size: 1.5rem; color: var(--muted-gold); display: block; margin-bottom: 10px;">🚙</span>
+              <strong style="display: block; font-size: 0.95rem; margin-bottom: 6px;">Private Safaris</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Dedicated jeep arrangements with tickets, water, and binoculars.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner-section section-pad-sm">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text">
+          <span class="eyebrow">Plan Your Stay</span>
+          <h2 class="display-3">Ready to <em>Experience</em> Forest Dew?</h2>
+          <p>Enquire about dates, room categories, and custom safari arrangements directly.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="plan-stay.html" class="btn btn-graphite">Build Itinerary ↗</a>
+          <a href="rooms.html" class="btn btn-outline">Check Rates ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Traveling Light Motion Line Divider -->
+  <div class="light-motion-line" aria-hidden="true"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand-lockup">
+            <img src="assets/images/logo-mark.png" alt="Forest Dew Logo" class="footer-brand-logo" width="48" height="48">
+            <div class="brand-words">
+              <span class="brand-name" style="color: var(--soft-chalk);">Forest Dew</span>
+              <span class="brand-sub">Udawalawa</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A contemporary boutique safari hotel located near Udawalawe National Park, Sri Lanka. Offering comfortable accommodation, pool, dining, and private guided safari game drives.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+            <li><a href="room-details.html">Accommodation Details</a></li>
+            <li><a href="safari.html">Safari Packages</a></li>
+            <li><a href="experiences.html">Hotel Experiences</a></li>
+            <li><a href="gallery.html">Photo Journal</a></li>
+            <li><a href="about.html">About Forest Dew</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Enquiries</h4>
+          <ul class="footer-nav-list">
+            <li><a href="plan-stay.html">Build Your Itinerary</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="https://wa.me/94766386132" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><a href="privacy.html">Privacy &amp; Photo Credits</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Location</h4>
+          <div class="footer-contact-details">
+            <address style="font-style: normal;">
+              Forest Dew Udawalawa<br>
+              484/1 C.P. De Silva Road<br>
+              Udawalawa, 70190, Sri Lanka
+            </address>
+            <p>Telephone: <a href="tel:+94766386132">+94 76 638 6132</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark" aria-hidden="true">FOREST DEW</div>
+      <div class="footer-bottom-bar">
+        <span>&copy; <span data-current-year>2026</span> Forest Dew Udawalawa. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#credits">Image Credits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- International Luxury Floating Concierge (WhatsApp) -->
+  <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%20Udawalawa%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." class="luxury-concierge-pill" aria-label="Direct WhatsApp Concierge" target="_blank" rel="noopener noreferrer">
+    <div class="concierge-avatar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L4 20.5l1.3-4.1a8.5 8.5 0 1 1 15.2-4.6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 9c-.3.4-.8 1.4-.4 2.2.7 1.8 3.2 4.2 5 4.7.8.2 1.5-.4 1.9-.9l-1.6-1.2-1.1.7c-1.2-.6-2.1-1.6-2.7-2.8l.8-1L9.5 9Z" fill="currentColor"/>
+      </svg>
+      <span class="concierge-pulse" aria-hidden="true"></span>
+    </div>
+    <div class="concierge-text">
+      <span class="concierge-title">Hotel Concierge</span>
+      <span class="concierge-status">Online · Udawalawe</span>
+    </div>
+  </a>
+  <!-- Accessible Lightbox Modal -->
+  <div class="lightbox-modal" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Expanded room photo view">
+    <button type="button" class="lightbox-close-btn" aria-label="Close photo preview">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" class="lightbox-img">
+      </div>
+      <p class="lightbox-caption-text"></p>
+    </div>
+  </div>
+
+  <div class="mobile-sticky-dock" aria-label="Mobile reservation actions">
+    <div class="mobile-dock-grid">
+      <a href="plan-stay.html" class="btn btn-gold" style="padding: 12px; font-size: 0.72rem;">Plan Stay ↗</a>
+      <a href="https://wa.me/94766386132" class="btn btn-outline-light" style="padding: 12px; font-size: 0.72rem;" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+    </div>
+  </div>
+</body>
+</html>

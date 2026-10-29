@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191D1C">
+  <title>Hotel Experiences &amp; Spaces | Forest Dew Udawalawa</title>
+  <meta name="description" content="Discover the hotel experiences at Forest Dew Udawalawa. Outdoor swimming pool, open-air terrace, local dining, and quiet nature sanctuaries.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forest Dew Udawalawa">
+  <meta property="og:title" content="Hotel Experiences &amp; Spaces | Forest Dew Udawalawa">
+  <meta property="og:description" content="Immerse in nature and unhurried boutique luxury at Forest Dew Udawalawa. Swimming pool, restaurant dining, and forest garden tranquility.">
+  <meta property="og:image" content="assets/images/swimming-pool.webp">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dark Mode Instant Theme Initialization (Prevents FOUC) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('fd_theme');
+      if (t) { document.documentElement.setAttribute('data-theme', t); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+</head>
+<body data-page="experiences">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header header-dark" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand" aria-label="Forest Dew Udawalawa — Return to homepage">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/logo-mark.png" alt="Forest Dew Emblem" class="brand-emblem" width="40" height="40">
+        </div>
+        <div class="brand-words">
+          <span class="brand-name">Forest Dew</span>
+          <span class="brand-sub">Udawalawa</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" data-link="home">Home</a>
+        <a href="rooms.html" class="nav-link" data-link="rooms">Rooms &amp; Rates</a>
+        <a href="safari.html" class="nav-link" data-link="safari">Safari</a>
+        <a href="experiences.html" class="nav-link active" data-link="experiences" aria-current="page">Experiences</a>
+        <a href="gallery.html" class="nav-link" data-link="gallery">Gallery</a>
+        <a href="about.html" class="nav-link" data-link="about">About</a>
+        <a href="contact.html" class="nav-link" data-link="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+94766386132" class="header-phone" aria-label="Call Forest Dew Reception">
+          <span>+94 76 638 6132</span>
+        </a>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="plan-stay.html" class="header-cta">
+          Plan Your Stay <span class="btn-icon-arrow" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span class="eyebrow eyebrow-dark" style="margin: 0;">Boutique Safari Stay · Udawalawe</span>
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Switch between day and night atmosphere">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation Menu">
+        <a href="index.html" class="mobile-drawer-link" data-link="home">Home <span>01</span></a>
+        <a href="rooms.html" class="mobile-drawer-link" data-link="rooms">Rooms &amp; Rates <span>02</span></a>
+        <a href="safari.html" class="mobile-drawer-link" data-link="safari">Safari Adventures <span>03</span></a>
+        <a href="experiences.html" class="mobile-drawer-link active" data-link="experiences">Hotel Experiences <span>04</span></a>
+        <a href="gallery.html" class="mobile-drawer-link" data-link="gallery">Photo Journal <span>05</span></a>
+        <a href="plan-stay.html" class="mobile-drawer-link" data-link="planner">Plan Your Stay <span>06</span></a>
+        <a href="about.html" class="mobile-drawer-link" data-link="about">About Forest Dew <span>07</span></a>
+        <a href="contact.html" class="mobile-drawer-link" data-link="contact">Contact &amp; Location <span>08</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="tel:+94766386132" class="mobile-drawer-phone">+94 76 638 6132 ↗</a>
+      <p class="mobile-drawer-address">484/1 C.P. De Silva Road, Udawalawa, 70190, Sri Lanka</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Experiences Hero -->
+    <section class="page-hero-editorial" aria-label="Experiences Hero">
+      <div class="page-hero-bg">
+        <img src="assets/images/hotel-aerial-canopy.jpg" alt="Aerial panorama of Forest Dew nestled within Udawalawe forest canopy and lake" fetchpriority="high">
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow eyebrow-dark">Unhurried Living</span>
+        <div class="hero-light-accent-beam" aria-hidden="true"></div>
+        <h1 class="page-hero-title">
+          Small Rituals.<br><em class="gold-shimmer-text">Lasting</em> Memories.
+        </h1>
+        <p class="page-hero-lead">
+          The simple, profound joys of a nature-led stay in Udawalawe. From morning coffee overlooking the treetops to afternoon dips in the pool and fireside conversations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Creative Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- Detailed Experiences List -->
+    <section class="section-pad">
+      <div class="container">
+        <!-- Experience 01: Swimming Pool -->
+        <div class="story-grid" style="margin-bottom: 110px;">
+          <div class="story-copy-panel reveal-fade-up">
+            <span class="eyebrow">Water &amp; Stillness</span>
+            <h2 class="display-2">The Poolside <em>Sanctuary.</em></h2>
+            <p class="lead-text">
+              Under the southern Sri Lankan sun, our outdoor swimming pool is a natural centerpiece for daily relaxation.
+            </p>
+            <p>
+              Framed by tropical garden plants and palm fronds, it offers cool respite after dusty game drives across the park. Bring a book, take an unhurried swim, and let the afternoon pass without an itinerary.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="gallery.html" class="btn-text">View Pool Photography <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="story-visuals reveal-clip-right">
+            <div class="img-hover-zoom" style="border-radius: var(--radius-sm); height: 500px;">
+              <img src="assets/images/swimming-pool.webp" alt="Real outdoor swimming pool at Forest Dew Udawalawa" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 02: Dining Terrace -->
+        <div class="story-grid" style="margin-bottom: 110px;">
+          <div class="story-visuals reveal-clip-right" style="order: 2;">
+            <div class="img-hover-zoom" style="border-radius: var(--radius-sm); height: 500px;">
+              <img src="assets/images/restaurant-tables.webp" alt="Dining area tables at Forest Dew" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+          </div>
+          <div class="story-copy-panel reveal-fade-up" style="order: 1;">
+            <span class="eyebrow">Local Flavors</span>
+            <h2 class="display-2">Gathering at <em>the Table.</em></h2>
+            <p class="lead-text">
+              Food at Forest Dew celebrates Sri Lankan home-style culinary traditions and fresh local produce.
+            </p>
+            <p>
+              Start early with fresh tropical fruits and hot Ceylon tea before your dawn safari departure. In the evening, enjoy hearty rice and curry banquets, aromatic spiced vegetable dishes, and unhurried dining with fellow travelers.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="rooms.html#rates-table" class="btn-text">Explore Meal Plans <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 03: Nature Canopy Terrace -->
+        <div class="story-grid" style="margin-bottom: 110px;">
+          <div class="story-copy-panel reveal-fade-up">
+            <span class="eyebrow">Canopy Views</span>
+            <h2 class="display-2">Treetop <em>Vistas.</em></h2>
+            <p class="lead-text">
+              Our nature-facing balcony looks out directly onto the surrounding green tree canopy and village foliage.
+            </p>
+            <p>
+              It is the premier vantage point on the property for birdwatching during dawn and sunset. Keep your binoculars ready for hornbills, parakeets, kingfishers, and iridescent sunbirds darting through the leaves.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="safari.html" class="btn-text">Discover Safaris <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="story-visuals reveal-clip-right">
+            <div class="img-hover-zoom" style="border-radius: var(--radius-sm); height: 500px;">
+              <img src="assets/images/forest-balcony.webp" alt="Treetop balcony view from Forest Dew" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 04: Garden Living & Verandas -->
+        <div class="story-grid" style="margin-bottom: 70px;">
+          <div class="story-visuals reveal-clip-right" style="order: 2;">
+            <div class="img-hover-zoom" style="border-radius: var(--radius-sm); height: 500px;">
+              <img src="assets/images/hotel-exterior-facade.jpg" alt="Two-storey boutique white guest wing with private balconies, garden terrace, and elephant ear foliage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+          </div>
+          <div class="story-copy-panel reveal-fade-up" style="order: 1;">
+            <span class="eyebrow">Outdoor Spaces</span>
+            <h2 class="display-2">Verandas &amp; <em>Lush Lawns.</em></h2>
+            <p class="lead-text">
+              Step directly from your suite into shaded verandas and an emerald garden framed by giant tropical elephant ear plants.
+            </p>
+            <p>
+              Furnished with handcrafted timber recliners, the ground terrace offers a breezy setting for afternoon reading, quiet tea moments, and letting the clean jungle breeze wash over you after hours exploring the national park.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="rooms.html" class="btn-text">View Guest Suites <span class="btn-icon-arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Traveling Light Motion Line Divider -->
+    <div class="light-motion-line" aria-hidden="true"></div>
+
+    <!-- CTA Section -->
+    <section class="cta-banner-section section-pad-sm">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text">
+          <span class="eyebrow">Plan Your Stay</span>
+          <h2 class="display-3">Experience It for <em class="gold-shimmer-text">Yourself.</em></h2>
+          <p>Book your stay and custom safari adventure directly with the hotel.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="plan-stay.html" class="btn btn-graphite">Build Stay Plan ↗</a>
+          <a href="contact.html" class="btn btn-outline">Contact Hotel ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Traveling Light Motion Line Divider -->
+  <div class="light-motion-line" aria-hidden="true"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand-lockup">
+            <img src="assets/images/logo-mark.png" alt="Forest Dew Logo" class="footer-brand-logo" width="48" height="48">
+            <div class="brand-words">
+              <span class="brand-name" style="color: var(--soft-chalk);">Forest Dew</span>
+              <span class="brand-sub">Udawalawa</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A contemporary boutique safari hotel located near Udawalawe National Park, Sri Lanka. Offering comfortable accommodation, pool, dining, and private guided safari game drives.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+            <li><a href="room-details.html">Accommodation Details</a></li>
+            <li><a href="safari.html">Safari Packages</a></li>
+            <li><a href="experiences.html">Hotel Experiences</a></li>
+            <li><a href="gallery.html">Photo Journal</a></li>
+            <li><a href="about.html">About Forest Dew</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Enquiries</h4>
+          <ul class="footer-nav-list">
+            <li><a href="plan-stay.html">Build Your Itinerary</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="https://wa.me/94766386132" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><a href="privacy.html">Privacy &amp; Photo Credits</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Location</h4>
+          <div class="footer-contact-details">
+            <address style="font-style: normal;">
+              Forest Dew Udawalawa<br>
+              484/1 C.P. De Silva Road<br>
+              Udawalawa, 70190, Sri Lanka
+            </address>
+            <p>Telephone: <a href="tel:+94766386132">+94 76 638 6132</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark" aria-hidden="true">FOREST DEW</div>
+      <div class="footer-bottom-bar">
+        <span>&copy; <span data-current-year>2026</span> Forest Dew Udawalawa. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#credits">Image Credits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- International Luxury Floating Concierge (WhatsApp) -->
+  <a href="https://wa.me/94766386132?text=Hello%20Forest%20Dew%20Udawalawa%2C%20I%20would%20like%20to%20enquire%20about%20experiences." class="luxury-concierge-pill" aria-label="Direct WhatsApp Concierge" target="_blank" rel="noopener noreferrer">
+    <div class="concierge-avatar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L4 20.5l1.3-4.1a8.5 8.5 0 1 1 15.2-4.6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 9c-.3.4-.8 1.4-.4 2.2.7 1.8 3.2 4.2 5 4.7.8.2 1.5-.4 1.9-.9l-1.6-1.2-1.1.7c-1.2-.6-2.1-1.6-2.7-2.8l.8-1L9.5 9Z" fill="currentColor"/>
+      </svg>
+      <span class="concierge-pulse" aria-hidden="true"></span>
+    </div>
+    <div class="concierge-text">
+      <span class="concierge-title">Hotel Concierge</span>
+      <span class="concierge-status">Online · Udawalawe</span>
+    </div>
+  </a>
+  <div class="mobile-sticky-dock" aria-label="Mobile reservation actions">
+    <div class="mobile-dock-grid">
+      <a href="plan-stay.html" class="btn btn-gold" style="padding: 12px; font-size: 0.72rem;">Plan Stay ↗</a>
+      <a href="https://wa.me/94766386132" class="btn btn-outline-light" style="padding: 12px; font-size: 0.72rem;" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+    </div>
+  </div>
+</body>
+</html>
